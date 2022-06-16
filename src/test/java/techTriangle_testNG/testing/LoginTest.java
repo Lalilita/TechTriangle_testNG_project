@@ -10,7 +10,7 @@ import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
-public class Template extends CommonMethods{
+public class LoginTest extends CommonMethods{
 
 	WebDriver driver;
 
