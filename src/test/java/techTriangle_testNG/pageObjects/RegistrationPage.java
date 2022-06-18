@@ -3,6 +3,7 @@ package techTriangle_testNG.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
@@ -86,6 +87,7 @@ public class RegistrationPage extends CommonMethods{
 		CommonMethods.click(country);
 		CommonMethods.selectDropDownValue(country,BaseClass.getProperty("country"));
 		CommonMethods.click(state);
+		CommonMethods.waitForClickability(state);
 		CommonMethods.selectDropDownValue(state,BaseClass.getProperty("state"));
 		CommonMethods.sendText(zipCode, BaseClass.getProperty("zipCode"));
 		CommonMethods.sendText(phone, BaseClass.getProperty("phone"));
@@ -100,13 +102,14 @@ public class RegistrationPage extends CommonMethods{
 //		CommonMethods.click(captcha);
 //		
 //	}
-	
-	public void screenshotCaptcha() {
-		
-		CommonMethods.scrollToElement(captcha);
-	}
+//	
+//	public void screenshotCaptcha() {
+//		
+//		CommonMethods.scrollToElement(captcha);
+//	}
 	
 	public void register() {
+		CommonMethods.wait(15);
 		CommonMethods.click(registerButton);
 	}
 	

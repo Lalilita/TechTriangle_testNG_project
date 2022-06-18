@@ -2,6 +2,7 @@ package techTriangle_testNG.testing;
 
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,13 +26,15 @@ public class Test_RegistrationPage extends CommonMethods{
 	}
   
 	@Test
-	public void test() {
+	public void accountRegistration() {
 		regisPage.signUp();
 		regisPage.userInformation();
 		regisPage.billToAddress();
 		regisPage.shipToAddress();
-		regisPage.screenshotCaptcha();
+//		regisPage.screenshotCaptcha();
 		regisPage.register();
+		Assert.assertTrue(regisPage.registerButton.isDisplayed());
+		Assert.assertTrue(regisPage.registerButton.isEnabled());
 		
 	}
 

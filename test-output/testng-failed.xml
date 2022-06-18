@@ -6,7 +6,7 @@
       <class name="techTriangle_testNG.testing.Test_RegistrationPage">
         <methods>
           <include name="setup"/>
-          <include name="test"/>
+          <include name="accountRegistration"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.Test_RegistrationPage -->
