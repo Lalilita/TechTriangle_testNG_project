@@ -31,8 +31,6 @@ public class PageInitializer extends BaseClass {
 	public static NewArrivalsPage arrivalPage;
 	
 	
-	
-	
 	public static void initialize() {
 		homePage = new HomePage(); 
 		loginPage = new LoginPage();  
