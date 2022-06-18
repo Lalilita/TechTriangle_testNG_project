@@ -3,30 +3,30 @@ package techTriangle_testNG.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
-public class CheckoutPage extends CommonMethods{
+public class DumbbellsPage extends CommonMethods{
 
 	
-	public CheckoutPage() {
+	public DumbbellsPage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 	
-	@FindBy(xpath = "//div[@id='cart_preview']")
-	public WebElement itemLink;
+	@FindBy(xpath = "//*[@class='widget browse_sub_categories']/div[2]")
+	public WebElement virginRubberDumbbellsWidget;
 	
-	@FindBy(xpath = "//form[@id='checkout-form']")
-	public WebElement checkoutForm;
 
 	
 	// -------------- Methods -------------- //
 	
-	public void previewCart() {
-		itemLink.click();
-	}
 	
+	public void goToVirginRubberDumbbellsPage() {
+		virginRubberDumbbellsWidget.click();
+	}
 
+	
+	
+	
 }	
 	
