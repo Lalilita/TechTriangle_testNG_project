@@ -8,6 +8,8 @@ public class Constants {
 	
 	public static final String SCREENSHOT_FILEPATH = "test-output/screenshort";
 	
+	public static final String quantityAdd = "2";
+	
 	
 	
 	

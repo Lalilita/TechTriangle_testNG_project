@@ -22,7 +22,7 @@ public class Test_RegistrationPage extends CommonMethods{
 
 	@AfterClass
 	public void teardown() {
-//		BaseClass.getDriver().close();
+		BaseClass.getDriver().close();
 	}
   
 	@Test
