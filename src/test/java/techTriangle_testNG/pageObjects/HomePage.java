@@ -1,6 +1,10 @@
 package techTriangle_testNG.pageObjects;
 
+
+
+import java.util.Iterator;
 import java.util.List;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -140,26 +144,78 @@ public class HomePage extends CommonMethods{
 //Home page image clickable
 	
 	@FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div[2]/div[3]/div")
-	public WebElement homePageProductImages;
+	public List<WebElement> homePageProductImages;
 	
-	public void verifyImageClickable() {
+	@FindBy (xpath = "//a[@href='/zkett/kettlebells']//span//img")
+	public WebElement kettlebells;
+	
+	@FindBy (xpath = "//div[@class='strength']//a//span//img")
+	public WebElement weightPlates;
+	
+	@FindBy (xpath = "//a[@href='https://www.fitnessavenue.ca/zpr/squat-power-racks']//span//img")
+	public WebElement squatPowerRack;
+	
+	@FindBy (xpath = "//a[@href='https://www.fitnessavenue.ca/zgf/gym-flooring']//span//img")
+	public WebElement gymFlooring;
+	
+	@FindBy (xpath = "//div[@class='back-link']//a[@href='#']")
+	public WebElement backButton;
+	
+	
+	public void verifyImagesClickable() {
 		
-		List <WebElement> listOfImage = BaseClass.getDriver().findElements(By.xpath("/html/body/div[1]/div[2]/div[2]/div[2]/div[3]/div"));
+		List <WebElement> listOfImage = homePageProductImages;
 		int imageNum = listOfImage.size();
+		System.out.println("Number of images in home pages: "+imageNum);
 		Assert.assertTrue(imageNum==Constants.homePageImageNum);
 		
-		for (WebElement eachImage : listOfImage) {
-			String imageName = eachImage.getAttribute("textContent");
-			System.out.println(imageName);
-			
-			CommonMethods.waitForClickability(eachImage);
-			eachImage.click();
-			CommonMethods.waitForClickability(eachImage);
-			CommonMethods.click(homeButton);
-			CommonMethods.waitForClickability(eachImage);
+		CommonMethods.click(kettlebells);
+		String actualResult_kettlebells = BaseClass.getDriver().getCurrentUrl();
+		String expectedResult_kettlebells = "https://www.fitnessavenue.ca/zkett/kettlebells";
+		Assert.assertEquals(actualResult_kettlebells, expectedResult_kettlebells);
+		
+		CommonMethods.click(backButton);
+		
+		CommonMethods.click(weightPlates);
+		String actualResult_weightPlates = BaseClass.getDriver().getCurrentUrl();
+		String expectedResult_weightPlates = "https://www.fitnessavenue.ca/zwe1/plates";
+		Assert.assertEquals(actualResult_weightPlates, expectedResult_weightPlates);
+		
+		CommonMethods.click(backButton);
+	
+		CommonMethods.click(dumbbells);
+		String actualResult_dumbbells = BaseClass.getDriver().getCurrentUrl();
+		String expectedResult_dumbbells = "https://www.fitnessavenue.ca/zdum/dumbbells";
+		Assert.assertEquals(actualResult_dumbbells, expectedResult_dumbbells);
+		
+		CommonMethods.click(backButton);
+		
+		CommonMethods.click(squatPowerRack);
+		String actualResult_squatPowerRack = BaseClass.getDriver().getCurrentUrl();
+		String expectedResult_squatPowerRack = "https://www.fitnessavenue.ca/zpr/squat-power-racks";
+		Assert.assertEquals(actualResult_squatPowerRack, expectedResult_squatPowerRack);
+		
+		CommonMethods.click(backButton);
+		
+		CommonMethods.click(gymFlooring);
+		String actualResult_gymFlooring = BaseClass.getDriver().getCurrentUrl();
+		String expectedResult_gymFlooring = "https://www.fitnessavenue.ca/zgf/gym-flooring";
+		Assert.assertEquals(actualResult_gymFlooring, expectedResult_gymFlooring);
+		
+//			for (WebElement eachImage : listOfImage) {
+//			eachImage.click();
+//			CommonMethods.click(homeButton);
+//			String imageName = eachImage.getAttribute("textContent");
+//			System.out.println(eachImage.getAttribute("textContent"));
+//	
+//			CommonMethods.waitForClickability(eachImage);
+//			eachImage.click();
+//			CommonMethods.waitForClickability(eachImage);
+//			CommonMethods.click(homeButton);
+//			CommonMethods.waitForClickability(eachImage);
 //			
 			
-		}
+		
 		
 		
 		

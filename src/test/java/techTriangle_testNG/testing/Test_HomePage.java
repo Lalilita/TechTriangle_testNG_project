@@ -18,11 +18,11 @@ public class Test_HomePage extends CommonMethods {
 	@AfterClass
 	public void teardown() {
 		System.out.println("browser closed");
-		BaseClass.getDriver().close();
+//		BaseClass.getDriver().close();
 	}
   
 	@Test(enabled = false)
-	public void HomePage_AddItemToCart() {
+	public void homePage_AddItemToCart() {
 		homePage.homePageAddItemToCart();
 		homePage.addMultipleItemsToCart();
 		homePage.verifyTotalPrice();
@@ -30,7 +30,8 @@ public class Test_HomePage extends CommonMethods {
 	
 	@Test (enabled = true)
 	public void homePage_imageClickable() {
-		homePage.verifyImageClickable();
+		
+		homePage.verifyImagesClickable();
 		
 	}
 	
