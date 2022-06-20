@@ -2,6 +2,8 @@ package techTriangle_testNG.testing;
 
 
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -22,7 +24,6 @@ public class weightsProductTest extends CommonMethods{
 
 	@AfterClass
 	public void teardown() {
-		System.out.println("browser closed");
 	}
   
 	@Test
@@ -49,12 +50,18 @@ public class weightsProductTest extends CommonMethods{
 		cartPage.updateQty(getProperty("firstQty"));
 		Thread.sleep(1000);
 		cartPage.updateQty(getProperty("secondQty"));
+		ArrayList<String> cartList = cartPage.getListOfAddedProduct();
 		cartPage.goToCheckOutProcess();
+		checkPage.enterBillingInfo();
+		checkPage.verifyReviewOrderIsCorrect(cartList, checkPage.getListOfReviewOrder());
+		checkPage.verifyPlaceOrederBtnIsEnable();
+	}
+	
+	@Test(dependsOnMethods = "TTG_WPP_004_verifyShoppingProcess")
+	public void TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn() {
 		checkPage.previewCart();
 		cartPage.verifyClearBtn();
 	}
-	
-	
 	
 	
 

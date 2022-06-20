@@ -1,6 +1,9 @@
 package techTriangle_testNG.pageObjects;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,6 +18,12 @@ public class ShoppingCartPage extends CommonMethods {
 	public ShoppingCartPage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
+
+	@FindBy(xpath = "//div[@class='widget product_part_num content']")
+	public WebElement productPartNumber;
+
+	@FindBy(xpath = "//div[@class='widget product_short_description']//a")
+	public WebElement productName;
 
 	@FindBy(xpath = "//input[@class='qty']")
 	public WebElement qtyBox;
@@ -73,7 +82,7 @@ public class ShoppingCartPage extends CommonMethods {
 		aceptAlert();
 		Assert.assertTrue(noItemHeader.isDisplayed());
 		Assert.assertTrue(continueShoppingLink.isDisplayed());
-		System.out.println("Product qty is cleared");
+		System.out.println("All Product in cart is cleared");
 	}
 
 	public void goToCheckOutProcess() {
@@ -81,6 +90,17 @@ public class ShoppingCartPage extends CommonMethods {
 		Assert.assertEquals(Constants.checkoutUrl, driver.getCurrentUrl());
 		Assert.assertTrue(checkPage.checkoutForm.isDisplayed());
 		System.out.println("Checkout button navigate to Checkout Page");
+	}
+
+	public ArrayList<String> getListOfAddedProduct() {
+		ArrayList<String> addedProductList = new ArrayList<>();
+		addedProductList.add(productPartNumber.getText());
+		addedProductList.add(productName.getText());
+		addedProductList.add(qtyBox.getAttribute("value"));
+		addedProductList.add(itemPrice.getText());
+		addedProductList.add(total.getText());
+		addedProductList.add(subtotal.getText());
+		return addedProductList;
 	}
 
 }

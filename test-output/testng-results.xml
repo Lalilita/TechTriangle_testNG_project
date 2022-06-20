@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-17T21:41:27 EDT" name="Default suite" finished-at="2022-06-17T21:42:03 EDT" duration-ms="35566">
+  <suite started-at="2022-06-19T21:28:55 EDT" name="Default suite" finished-at="2022-06-19T21:29:34 EDT" duration-ms="38687">
     <groups>
     </groups>
-    <test started-at="2022-06-17T21:41:27 EDT" name="Default test" finished-at="2022-06-17T21:42:03 EDT" duration-ms="35566">
+    <test started-at="2022-06-19T21:28:55 EDT" name="Default test" finished-at="2022-06-19T21:29:34 EDT" duration-ms="38687">
       <class name="techTriangle_testNG.testing.weightsProductTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@1d119efb]" started-at="2022-06-17T21:41:28 EDT" name="setup" finished-at="2022-06-17T21:41:37 EDT" duration-ms="9203" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:28:55 EDT" name="setup" finished-at="2022-06-19T21:29:04 EDT" duration-ms="9130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TTG_WPP_001_verifyWeightsTab()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@1d119efb]" started-at="2022-06-17T21:41:37 EDT" name="TTG_WPP_001_verifyWeightsTab" finished-at="2022-06-17T21:41:43 EDT" duration-ms="5803" status="PASS">
+        <test-method signature="TTG_WPP_001_verifyWeightsTab()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:29:04 EDT" name="TTG_WPP_001_verifyWeightsTab" finished-at="2022-06-19T21:29:07 EDT" duration-ms="3274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TTG_WPP_001_verifyWeightsTab -->
-        <test-method signature="TTG_WPP_002_verifyAddOutOfStockProduct()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@1d119efb]" started-at="2022-06-17T21:41:43 EDT" name="TTG_WPP_002_verifyAddOutOfStockProduct" finished-at="2022-06-17T21:41:49 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_001_verifyWeightsTab" duration-ms="6507" status="PASS">
+        <test-method signature="TTG_WPP_002_verifyAddOutOfStockProduct()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:29:07 EDT" name="TTG_WPP_002_verifyAddOutOfStockProduct" finished-at="2022-06-19T21:29:16 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_001_verifyWeightsTab" duration-ms="8156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TTG_WPP_002_verifyAddOutOfStockProduct -->
-        <test-method signature="TTG_WPP_003_verifyAddAvalibleProduct()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@1d119efb]" started-at="2022-06-17T21:41:49 EDT" name="TTG_WPP_003_verifyAddAvalibleProduct" finished-at="2022-06-17T21:41:53 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_002_verifyAddOutOfStockProduct" duration-ms="4217" status="PASS">
+        <test-method signature="TTG_WPP_003_verifyAddAvalibleProduct()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:29:16 EDT" name="TTG_WPP_003_verifyAddAvalibleProduct" finished-at="2022-06-19T21:29:19 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_002_verifyAddOutOfStockProduct" duration-ms="3590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TTG_WPP_003_verifyAddAvalibleProduct -->
-        <test-method signature="TTG_WPP_004_verifyShoppingProcess()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@1d119efb]" started-at="2022-06-17T21:41:53 EDT" name="TTG_WPP_004_verifyShoppingProcess" finished-at="2022-06-17T21:42:03 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_003_verifyAddAvalibleProduct" duration-ms="9774" status="PASS">
+        <test-method signature="TTG_WPP_004_verifyShoppingProcess()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:29:19 EDT" name="TTG_WPP_004_verifyShoppingProcess" finished-at="2022-06-19T21:29:30 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_003_verifyAddAvalibleProduct" duration-ms="10886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TTG_WPP_004_verifyShoppingProcess -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@1d119efb]" started-at="2022-06-17T21:42:03 EDT" name="teardown" finished-at="2022-06-17T21:42:03 EDT" duration-ms="3" status="PASS">
+        <test-method signature="TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:29:30 EDT" name="TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn" finished-at="2022-06-19T21:29:34 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_004_verifyShoppingProcess" duration-ms="3581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@72a7c7e0]" started-at="2022-06-19T21:29:34 EDT" name="teardown" finished-at="2022-06-19T21:29:34 EDT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

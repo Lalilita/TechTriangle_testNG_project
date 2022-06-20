@@ -76,8 +76,8 @@ public class Dumbbell55VgRbPage extends CommonMethods{
 			Assert.assertEquals(actual55lbsProductDetails, Constants.expect55lbsProductDetails);
 //			System.out.println(Constants.expect55lbsProductDetails.toString());
 //			System.out.println(actual55lbsProductDetails.toString());
-		
 	}
+
 	
 	public void verifyAddToCartBtnDisplayAndClickable() {
 		Assert.assertTrue(addToCartBtn.isDisplayed());
