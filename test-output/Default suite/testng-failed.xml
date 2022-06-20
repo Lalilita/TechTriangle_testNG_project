@@ -5,8 +5,8 @@
     <classes>
       <class name="techTriangle_testNG.testing.Test_HomePage">
         <methods>
+          <include name="homePage_imageClickable"/>
           <include name="teardown"/>
-          <include name="addItemToCart"/>
           <include name="setup"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.Test_HomePage -->

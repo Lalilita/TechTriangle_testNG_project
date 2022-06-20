@@ -10,6 +10,8 @@ public class Constants {
 	
 	public static final String quantityAdd = "2";
 	
+	public static final int homePageImageNum = 5;
+	
 	
 	
 	

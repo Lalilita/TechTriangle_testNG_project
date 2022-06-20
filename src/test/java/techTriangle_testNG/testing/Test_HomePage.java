@@ -18,14 +18,19 @@ public class Test_HomePage extends CommonMethods {
 	@AfterClass
 	public void teardown() {
 		System.out.println("browser closed");
+		BaseClass.getDriver().close();
 	}
   
-	@Test(enabled = true)
-	public void addItemToCart() {
-		
+	@Test(enabled = false)
+	public void HomePage_AddItemToCart() {
 		homePage.homePageAddItemToCart();
 		homePage.addMultipleItemsToCart();
-		
+		homePage.verifyTotalPrice();
+	}
+	
+	@Test (enabled = true)
+	public void homePage_imageClickable() {
+		homePage.verifyImageClickable();
 		
 	}
 	

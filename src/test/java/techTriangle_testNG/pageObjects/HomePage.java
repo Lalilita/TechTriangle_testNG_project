@@ -1,5 +1,8 @@
 package techTriangle_testNG.pageObjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,11 +14,10 @@ import techTriangle_testNG.utilities.Constants;
 
 public class HomePage extends CommonMethods{
 
-	
 	public HomePage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
-	
+//Add to cart testing	
 	@FindBy (xpath= "//a[@href='/zkett/kettlebells']//span//img")
 	public WebElement kettlebellsTab;
 	
@@ -67,12 +69,12 @@ public class HomePage extends CommonMethods{
 		Assert.assertTrue(addToCartButton.isEnabled());
 		CommonMethods.click(addToCartButton);
 		System.out.println("==Bowflex SelectTech 840 Adjustable Kettlebell==");
-		String shoppingCartQuanity = cartQuantity840.getText();
-		System.out.println("Quantity :"+shoppingCartQuanity);
-		String shoppingItemName = itemsName840.getText();
-		System.out.println("Item name: "+shoppingItemName);
-		String shoppingUnitPrice = unitPrice840.getText();
-		System.out.println("Unit price: "+shoppingUnitPrice);
+		String shoppingCartQuanity1 = cartQuantity840.getText();
+		System.out.println("Quantity :"+shoppingCartQuanity1);
+		String shoppingItemName1 = itemsName840.getText();
+		System.out.println("Item name: "+shoppingItemName1);
+		String shoppingUnitPrice1 = unitPrice840.getText();
+		System.out.println("Unit price: "+shoppingUnitPrice1);
 		String shoppingTotalPrice =totalPrice.getText();
 		System.out.println("Total price "+shoppingTotalPrice);
 		Assert.assertTrue(cartQuantity840.isDisplayed());
@@ -90,20 +92,80 @@ public class HomePage extends CommonMethods{
 		CommonMethods.sendText(quantityInput2080, Constants.quantityAdd);
 		CommonMethods.click(addToCartButton);
 		System.out.println("===Bowflex SelectTech 2080 Upgrade - 40 lb Add-On===");
-		String shoppingCartQuanity = cartQuantity2080.getText();
-		System.out.println("Quantity :"+shoppingCartQuanity);
-		String shoppingItemName = itemsName2080.getText();
-		System.out.println("Item name: "+shoppingItemName);
-		String shoppingUnitPrice = unitPrice2080.getText();
-		System.out.println("Unit price: "+shoppingUnitPrice);
+		String shoppingCartQuanity2 = cartQuantity2080.getText();
+		System.out.println("Quantity :"+shoppingCartQuanity2);
+		String shoppingItemName2 = itemsName2080.getText();
+		System.out.println("Item name: "+shoppingItemName2);
+		String shoppingUnitPrice2 = unitPrice2080.getText();
+		System.out.println("Unit price: "+shoppingUnitPrice2);
 		String shoppingTotalPrice =totalPrice.getText();
 		System.out.println("Total price "+shoppingTotalPrice);
 		Assert.assertTrue(cartQuantity2080.isDisplayed());
 		Assert.assertTrue(itemsName2080.isDisplayed());
 		Assert.assertTrue(unitPrice2080.isDisplayed());
 		Assert.assertTrue(totalPrice.isDisplayed());
+	}
+	
+	public void verifyTotalPrice() {
+		
+		String shoppingCartQuanity1 = cartQuantity840.getText();
+		int intQuantity1 = Integer.parseInt(shoppingCartQuanity1);
+		
+		String shoppingUnitPrice1 = unitPrice840.getText();
+		String convertShoppingUnitPrice1= shoppingUnitPrice1.replaceAll("[$CADUSD]*", "");
+		double dUnitPrice1=Double.parseDouble(convertShoppingUnitPrice1);
+		double totalprice840 = dUnitPrice1 * intQuantity1;
+		System.out.println("Total Price_840 after convert is " +totalprice840);
+
+		String shoppingCartQuanity2 = cartQuantity2080.getText();
+		int intQuantity2 = Integer.parseInt(shoppingCartQuanity2);
+		
+		String shoppingUnitPrice2 = unitPrice2080.getText();
+		String convertShoppingUnitPrice2= shoppingUnitPrice2.replaceAll("[$CADUSD]*", "");
+		double dUnitPrice2 = Double.parseDouble(convertShoppingUnitPrice2);
+		double totalprice2080 = dUnitPrice2 * intQuantity2;
+		System.out.println("Total Price after convert is " +totalprice2080);
+	
+		double expectedTotalPrice = totalprice840 + totalprice2080;
+		System.out.println("Expected total price is : "+expectedTotalPrice);
+		
+		String shoppingTotalPrice =totalPrice.getText();
+		String convertShoppingTotalPrice= shoppingTotalPrice.replaceAll("[$CADUSD]*", "");
+		double actualTotalPrice=Double.parseDouble(convertShoppingTotalPrice);
+		System.out.println("Actual total price is: "+(actualTotalPrice));
+		
+		Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
+	}
+	
+//Home page image clickable
+	
+	@FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div[2]/div[3]/div")
+	public WebElement homePageProductImages;
+	
+	public void verifyImageClickable() {
+		
+		List <WebElement> listOfImage = BaseClass.getDriver().findElements(By.xpath("/html/body/div[1]/div[2]/div[2]/div[2]/div[3]/div"));
+		int imageNum = listOfImage.size();
+		Assert.assertTrue(imageNum==Constants.homePageImageNum);
+		
+		for (WebElement eachImage : listOfImage) {
+			String imageName = eachImage.getAttribute("textContent");
+			System.out.println(imageName);
+			
+			CommonMethods.waitForClickability(eachImage);
+			eachImage.click();
+			CommonMethods.waitForClickability(eachImage);
+			CommonMethods.click(homeButton);
+			CommonMethods.waitForClickability(eachImage);
+//			
+			
+		}
+		
+		
 		
 	}
-
+	
+	
+	
 }	
 	
