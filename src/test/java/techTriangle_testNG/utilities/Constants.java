@@ -12,6 +12,10 @@ public class Constants {
 	
 	public static final int homePageImageNum = 5;
 	
+	public static final int numberofBike = 7;
+	
+	public static final int standardwait_time = 3;
+	
 	
 	
 	

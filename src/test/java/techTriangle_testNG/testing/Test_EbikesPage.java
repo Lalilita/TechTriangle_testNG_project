@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
-public class Test_HomePage extends CommonMethods {
+public class Test_EbikesPage extends CommonMethods {
+	
 	WebDriver driver;
 	@BeforeClass
 	public void setup() {
@@ -21,19 +22,9 @@ public class Test_HomePage extends CommonMethods {
 		BaseClass.getDriver().close();
 	}
   
-	@Test(enabled = false)
-	public void homePage_AddItemToCart() {
-		homePage.homePageAddItemToCart();
-		homePage.addMultipleItemsToCart();
-		homePage.verifyTotalPrice();
+	@Test(enabled = true)
+	public void VerifyProductListInsideEbikesPage() {
+		ebikePage.verifyBikeImageCount();
 	}
 	
-	@Test (enabled = true)
-	public void homePage_imageClickable() {
-		homePage.verifyImagesClickable();
-	}
-	
-		
-
-
 }

@@ -8,8 +8,10 @@ import org.testng.annotations.Test;
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
-public class Test_HomePage extends CommonMethods {
+public class Test_CardioPage extends CommonMethods{
+
 	WebDriver driver;
+
 	@BeforeClass
 	public void setup() {
 		BaseClass.getDriver();
@@ -18,22 +20,14 @@ public class Test_HomePage extends CommonMethods {
 	@AfterClass
 	public void teardown() {
 		System.out.println("browser closed");
-		BaseClass.getDriver().close();
 	}
   
-	@Test(enabled = false)
-	public void homePage_AddItemToCart() {
-		homePage.homePageAddItemToCart();
-		homePage.addMultipleItemsToCart();
-		homePage.verifyTotalPrice();
-	}
-	
 	@Test (enabled = true)
-	public void homePage_imageClickable() {
-		homePage.verifyImagesClickable();
+	public void test() {
+		
+		
+		
 	}
 	
-		
-
-
+	
 }

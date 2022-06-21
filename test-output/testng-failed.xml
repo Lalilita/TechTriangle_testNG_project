@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="techTriangle_testNG.testing.Test_HomePage">
+      <class name="techTriangle_testNG.testing.Test_CardioPage">
         <methods>
-          <include name="homePage_imageClickable"/>
-          <include name="teardown"/>
+          <include name="VerifyListOfProductOnCardioPage"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- techTriangle_testNG.testing.Test_HomePage -->
+      </class> <!-- techTriangle_testNG.testing.Test_CardioPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
