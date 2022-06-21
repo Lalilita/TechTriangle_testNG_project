@@ -12,6 +12,8 @@ public class EbikesPage extends CommonMethods{
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 	
+	
+	
 //	@FindBy(xpath = " ")
 //	public WebElement ;
 

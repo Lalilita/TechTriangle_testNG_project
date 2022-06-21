@@ -18,7 +18,7 @@ public class Test_HomePage extends CommonMethods {
 	@AfterClass
 	public void teardown() {
 		System.out.println("browser closed");
-//		BaseClass.getDriver().close();
+		BaseClass.getDriver().close();
 	}
   
 	@Test(enabled = false)
@@ -30,10 +30,12 @@ public class Test_HomePage extends CommonMethods {
 	
 	@Test (enabled = true)
 	public void homePage_imageClickable() {
-		
 		homePage.verifyImagesClickable();
-		
 	}
+	
+		
+
+	
 	
 
 }

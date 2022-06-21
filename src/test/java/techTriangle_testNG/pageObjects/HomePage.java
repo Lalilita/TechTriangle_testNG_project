@@ -64,6 +64,11 @@ public class HomePage extends CommonMethods{
 	@FindBy (xpath = "//div[@class='widget_content']//span[@class='total_amount']")
 	public WebElement totalPrice;
 	
+	//Home page image clickable
+	
+	@FindBy (xpath = "//*[@id='content']/div[3]/div")
+	public List<WebElement> homePageProductImages;
+	
 	public void homePageAddItemToCart() {
 		CommonMethods.click(kettlebellsTab);
 		CommonMethods.getJSObject();
@@ -137,90 +142,31 @@ public class HomePage extends CommonMethods{
 		String convertShoppingTotalPrice= shoppingTotalPrice.replaceAll("[$CADUSD]*", "");
 		double actualTotalPrice=Double.parseDouble(convertShoppingTotalPrice);
 		System.out.println("Actual total price is: "+(actualTotalPrice));
-		
 		Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
 	}
-	
-//Home page image clickable
-	
-	@FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div[2]/div[3]/div")
-	public List<WebElement> homePageProductImages;
-	
-	@FindBy (xpath = "//a[@href='/zkett/kettlebells']//span//img")
-	public WebElement kettlebells;
-	
-	@FindBy (xpath = "//div[@class='strength']//a//span//img")
-	public WebElement weightPlates;
-	
-	@FindBy (xpath = "//a[@href='https://www.fitnessavenue.ca/zpr/squat-power-racks']//span//img")
-	public WebElement squatPowerRack;
-	
-	@FindBy (xpath = "//a[@href='https://www.fitnessavenue.ca/zgf/gym-flooring']//span//img")
-	public WebElement gymFlooring;
-	
-	@FindBy (xpath = "//div[@class='back-link']//a[@href='#']")
-	public WebElement backButton;
 	
 	
 	public void verifyImagesClickable() {
 		
-		List <WebElement> listOfImage = homePageProductImages;
-		int imageNum = listOfImage.size();
+		int imageNum = homePageProductImages.size();
+		CommonMethods.wait(3);
 		System.out.println("Number of images in home pages: "+imageNum);
 		Assert.assertTrue(imageNum==Constants.homePageImageNum);
+		String baseUrl = BaseClass.getDriver().getCurrentUrl();
 		
-		CommonMethods.click(kettlebells);
-		String actualResult_kettlebells = BaseClass.getDriver().getCurrentUrl();
-		String expectedResult_kettlebells = "https://www.fitnessavenue.ca/zkett/kettlebells";
-		Assert.assertEquals(actualResult_kettlebells, expectedResult_kettlebells);
+		 for(int i=0;i<imageNum;i++){
+			 WebElement listOfImage = homePageProductImages.get(i);
+			 CommonMethods.waitForClickability(listOfImage).click();
+			 String newUrl = BaseClass.getDriver().getCurrentUrl();
+			 System.out.println("Base URL: "+ baseUrl);
+			 System.out.println("Current URL: "+newUrl);
+			 Assert.assertFalse(baseUrl.equals(newUrl));
+			 BaseClass.getDriver().navigate().back();
+		 }
 		
-		CommonMethods.click(backButton);
-		
-		CommonMethods.click(weightPlates);
-		String actualResult_weightPlates = BaseClass.getDriver().getCurrentUrl();
-		String expectedResult_weightPlates = "https://www.fitnessavenue.ca/zwe1/plates";
-		Assert.assertEquals(actualResult_weightPlates, expectedResult_weightPlates);
-		
-		CommonMethods.click(backButton);
 	
-		CommonMethods.click(dumbbells);
-		String actualResult_dumbbells = BaseClass.getDriver().getCurrentUrl();
-		String expectedResult_dumbbells = "https://www.fitnessavenue.ca/zdum/dumbbells";
-		Assert.assertEquals(actualResult_dumbbells, expectedResult_dumbbells);
-		
-		CommonMethods.click(backButton);
-		
-		CommonMethods.click(squatPowerRack);
-		String actualResult_squatPowerRack = BaseClass.getDriver().getCurrentUrl();
-		String expectedResult_squatPowerRack = "https://www.fitnessavenue.ca/zpr/squat-power-racks";
-		Assert.assertEquals(actualResult_squatPowerRack, expectedResult_squatPowerRack);
-		
-		CommonMethods.click(backButton);
-		
-		CommonMethods.click(gymFlooring);
-		String actualResult_gymFlooring = BaseClass.getDriver().getCurrentUrl();
-		String expectedResult_gymFlooring = "https://www.fitnessavenue.ca/zgf/gym-flooring";
-		Assert.assertEquals(actualResult_gymFlooring, expectedResult_gymFlooring);
-		
-//			for (WebElement eachImage : listOfImage) {
-//			eachImage.click();
-//			CommonMethods.click(homeButton);
-//			String imageName = eachImage.getAttribute("textContent");
-//			System.out.println(eachImage.getAttribute("textContent"));
-//	
-//			CommonMethods.waitForClickability(eachImage);
-//			eachImage.click();
-//			CommonMethods.waitForClickability(eachImage);
-//			CommonMethods.click(homeButton);
-//			CommonMethods.waitForClickability(eachImage);
-//			
-			
-		
-		
-		
 		
 	}
-	
 	
 	
 }	
