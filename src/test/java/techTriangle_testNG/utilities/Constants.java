@@ -29,4 +29,18 @@ public class Constants {
 			new ArrayList<>(Arrays.asList("55lbs Virgin Rubber Hex Dumbbell", "Part #", "DUM060", "Market Price", 
 					"$110.00 CAD", "Our Price", "$71.50 CAD", "$71.50 CAD /ea"));
 	
+	//Link Equipment Tab 
+    public static final String[] StrengthEquipmentTab = {"Benches","Lower Body / Legs","Squat / Power Racks","Cable Attachments","Rigs","Weight Lifting Bars","Cable Machines","Upper Body","Weights","Core & Back"};
+	public static final String[] FitnessAccessoriesTab = {"Aerobic Training","Hand Grips","Workout Mats","Balance & Stability","Jump Ropes","Yoga & Pilates","Chin Up Bars","Recovery & Wellness","Straps, Wraps & Support","Exercise Balls", "Resistance / Elastic Bands", "Shaker Bottles"};
+	
+	//Input for shipping Estimate 
+	public static final String cityEstimate = "Sterling";
+	public static final String CountryEstimate = "United States";
+	public static final String CountryOutsiteUS = "Canada";
+	public static final String stateEstimate = "Virginia";
+	public static final String zipcodeEstimate = "20166";
+	public static final String SpecialDisplay = "AmStaff-Fitness-SpaceSmart";
+	
+	
+	
 }	
