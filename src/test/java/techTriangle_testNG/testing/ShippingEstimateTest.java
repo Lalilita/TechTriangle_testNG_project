@@ -1,5 +1,9 @@
 package techTriangle_testNG.testing;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 
 import org.testng.annotations.AfterClass;
@@ -31,7 +35,7 @@ public class ShippingEstimateTest extends CommonMethods{
 		@Test(priority = 1)
 		public void VerifyCartShipmentWithValidInfo() throws InterruptedException {
 			cartPage.AddValidInformation();
-			Assert.assertTrue(cartPage.ButtonEstimate.isEnabled());
+			AssertJUnit.assertTrue(cartPage.ButtonEstimate.isEnabled());
 			cartPage.VadidateShippingEstimate();
 		}	
 		
@@ -40,7 +44,7 @@ public class ShippingEstimateTest extends CommonMethods{
 			cartPage.ClearData(country,region);
 			cartPage.InputPostalCode.sendKeys(zipcode);
 			cartPage.InputCity.sendKeys(city);
-	        Assert.assertFalse(cartPage.ButtonEstimate.isEnabled());
+	        AssertJUnit.assertFalse(cartPage.ButtonEstimate.isEnabled());
 			Thread.sleep(3000);
 		}
 
