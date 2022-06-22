@@ -1,4 +1,4 @@
-package techTriangle_testNG.testing;
+package tola.others;
 
 
 import org.openqa.selenium.WebDriver;
@@ -27,14 +27,14 @@ public class Test_RegistrationPage extends CommonMethods{
   
 	@Test
 	public void accountRegistration() {
-		regisPage.signUp();
-		regisPage.userInformation();
-		regisPage.billToAddress();
-		regisPage.shipToAddress();
-//		regisPage.screenshotCaptcha();
-		regisPage.register();
-		Assert.assertTrue(regisPage.registerButton.isDisplayed());
-		Assert.assertTrue(regisPage.registerButton.isEnabled());
+//		regisPage.signUp();
+//		regisPage.userInformation();
+//		regisPage.billToAddress();
+//		regisPage.shipToAddress();
+////		regisPage.screenshotCaptcha();
+//		regisPage.register();
+//		Assert.assertTrue(regisPage.registerButton.isDisplayed());
+//		Assert.assertTrue(regisPage.registerButton.isEnabled());
 		
 	}
 

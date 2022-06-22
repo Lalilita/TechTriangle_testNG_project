@@ -43,15 +43,17 @@ public class EbikesPage extends CommonMethods{
 		String expectedBikeName = bikeName.getText();
 		System.out.println(expectedBikeName);
 		Assert.assertTrue(expectedBikeName.contains("Bike"));
-		
+		int bikeProductCount = 1;
 		for (int i = 1; i<Constants.numberofBike; i++) {
-			
 			CommonMethods.wait(Constants.standardwait_time);
 			forwardArrow.click();
+			bikeProductCount++;
 			expectedBikeName = bikeName.getText();
 			System.out.println(expectedBikeName);
-			Assert.assertTrue(expectedBikeName.contains("Bike"));
 		}
+		System.out.println("number of product listing on the page are: "+bikeProductCount);
+		Assert.assertTrue(bikeProductCount == Constants.numberofBike);
+		Assert.assertTrue(expectedBikeName.contains("Bike"));
 		CommonMethods.click(closeTab);
 	}
 

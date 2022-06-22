@@ -116,7 +116,6 @@ public class HomePage extends CommonMethods{
 	}
 	
 	public void verifyTotalPrice() {
-		
 		String shoppingCartQuanity1 = cartQuantity840.getText();
 		int intQuantity1 = Integer.parseInt(shoppingCartQuanity1);
 		
@@ -144,7 +143,6 @@ public class HomePage extends CommonMethods{
 		System.out.println("Actual total price is: "+(actualTotalPrice));
 		Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
 	}
-	
 	
 	public void verifyImagesClickable() {
 		
