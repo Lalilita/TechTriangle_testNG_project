@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="techTriangle_testNG.testing.StrengthEquipmentTabTest">
+      <class name="techTriangle_testNG.testing.weightsProductTest">
         <methods>
-          <include name="TearDown"/>
-          <include name="ValidateNumberItem"/>
-          <include name="SetUp"/>
+          <include name="TTG_WPP_001_verifyWeightsTab"/>
+          <include name="setup"/>
+          <include name="TTG_WPP_004_verifyShoppingProcess"/>
+          <include name="teardown"/>
+          <include name="TTG_WPP_003_verifyAddAvalibleProduct"/>
+          <include name="tearDown"/>
+          <include name="TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn"/>
+          <include name="TTG_WPP_002_verifyAddOutOfStockProduct"/>
         </methods>
-      </class> <!-- techTriangle_testNG.testing.StrengthEquipmentTabTest -->
+      </class> <!-- techTriangle_testNG.testing.weightsProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

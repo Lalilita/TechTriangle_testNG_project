@@ -41,11 +41,7 @@ public class BaseClass {
 		}
 		return driver;
 	}
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 17c188fe2bc64294d93c77d864aa4fb7e95bc775
 	@AfterMethod
 	public static void tearDown() {
 		if (driver != null) {
