@@ -2,6 +2,9 @@ package techTriangle_testNG.testing;
 
 
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
