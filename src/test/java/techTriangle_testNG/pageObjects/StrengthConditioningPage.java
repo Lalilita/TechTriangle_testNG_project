@@ -42,13 +42,13 @@ public class StrengthConditioningPage extends CommonMethods{
 
 	public void findSizeOfStrengthAndConProductGroups() {
 		int groupSize = strengthAndConProductGroups.size();
+		Assert.assertEquals(Integer.parseInt(getProperty("expectedTotalProductGroup")), groupSize);
 		System.out.println("There are "+groupSize+" groups of products are displayed");
 	}
 	
 	public void verifyStrengthAndConProductGroupsIsClickable() {
 		for(int i = 0; i < strengthAndConProductGroups.size(); i++) {
 			isClickable(strengthAndConProductGroups.get(i), driver); 
-//			System.out.println("group"+i+" is clickable");
 		}
 		System.out.println("Each group is clickable");
 	}
@@ -62,9 +62,9 @@ public class StrengthConditioningPage extends CommonMethods{
 		for(int i = 0; i < displayValue.size(); i++) {
 		selectDropDownIndex(displayDropDown, i); //1=12, 2=24, 3=48, 4=96
 		Thread.sleep(1000);
-		int displayNumber = Integer.parseInt(displayValue.get(i).getText());
-		int productDisplayNumber = bodyWeightProducts.size();
-		int expectedNumberPages = pageNumberDisplayed.size();
+		int displayNumber = Integer.parseInt(displayValue.get(i).getText()); //number that displayed in filter
+		int productDisplayNumber = bodyWeightProducts.size(); //number of product that displayed on each page
+		int expectedNumberPages = pageNumberDisplayed.size(); // expected number of page in the bottom box
 		int actualNumberPages = (Integer.parseInt(getProperty("totalProductInBodyWeigthGroup"))/displayNumber)+1;
 		Assert.assertTrue(productDisplayNumber <= displayNumber);
 		Assert.assertEquals(expectedNumberPages, actualNumberPages);

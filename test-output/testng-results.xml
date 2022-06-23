@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-23T00:40:02 EDT" name="Default suite" finished-at="2022-06-23T00:40:58 EDT" duration-ms="55756">
+  <suite started-at="2022-06-23T15:33:15 EDT" name="Default suite" finished-at="2022-06-23T15:33:39 EDT" duration-ms="24353">
     <groups>
     </groups>
-    <test started-at="2022-06-23T00:40:02 EDT" name="Default test" finished-at="2022-06-23T00:40:58 EDT" duration-ms="55756">
-      <class name="techTriangle_testNG.testing.weightsProductTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:02 EDT" name="setup" finished-at="2022-06-23T00:40:11 EDT" duration-ms="8735" status="PASS">
+    <test started-at="2022-06-23T15:33:15 EDT" name="Default test" finished-at="2022-06-23T15:33:39 EDT" duration-ms="24353">
+      <class name="techTriangle_testNG.testing.StrengthAndConNumberPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:techTriangle_testNG.testing.StrengthAndConNumberPageTest@3e92efc3]" started-at="2022-06-23T15:33:15 EDT" name="setup" finished-at="2022-06-23T15:33:23 EDT" duration-ms="8398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TTG_WPP_001_verifyWeightsTab()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:11 EDT" name="TTG_WPP_001_verifyWeightsTab" finished-at="2022-06-23T00:40:16 EDT" duration-ms="5676" status="PASS">
+        <test-method signature="TTG_STR_001_verifyStrengthAndConditioningTab()[pri:0, instance:techTriangle_testNG.testing.StrengthAndConNumberPageTest@3e92efc3]" started-at="2022-06-23T15:33:23 EDT" name="TTG_STR_001_verifyStrengthAndConditioningTab" finished-at="2022-06-23T15:33:27 EDT" duration-ms="3909" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TTG_WPP_001_verifyWeightsTab -->
-        <test-method signature="TTG_WPP_002_verifyAddOutOfStockProduct()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:16 EDT" name="TTG_WPP_002_verifyAddOutOfStockProduct" finished-at="2022-06-23T00:40:23 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_001_verifyWeightsTab" duration-ms="6693" status="PASS">
+        </test-method> <!-- TTG_STR_001_verifyStrengthAndConditioningTab -->
+        <test-method signature="TTG_STR_002_verifyProductGroupInStrengthAndConditioning()[pri:0, instance:techTriangle_testNG.testing.StrengthAndConNumberPageTest@3e92efc3]" started-at="2022-06-23T15:33:27 EDT" name="TTG_STR_002_verifyProductGroupInStrengthAndConditioning" finished-at="2022-06-23T15:33:29 EDT" depends-on-methods="techTriangle_testNG.testing.StrengthAndConNumberPageTest.TTG_STR_001_verifyStrengthAndConditioningTab" duration-ms="1984" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TTG_WPP_002_verifyAddOutOfStockProduct -->
-        <test-method signature="TTG_WPP_003_verifyAddAvalibleProduct()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:23 EDT" name="TTG_WPP_003_verifyAddAvalibleProduct" finished-at="2022-06-23T00:40:27 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_002_verifyAddOutOfStockProduct" duration-ms="3711" status="PASS">
+        </test-method> <!-- TTG_STR_002_verifyProductGroupInStrengthAndConditioning -->
+        <test-method signature="TTG_STR_003_verifyNumberPageProductDisplayed()[pri:0, instance:techTriangle_testNG.testing.StrengthAndConNumberPageTest@3e92efc3]" started-at="2022-06-23T15:33:29 EDT" name="TTG_STR_003_verifyNumberPageProductDisplayed" finished-at="2022-06-23T15:33:39 EDT" depends-on-methods="techTriangle_testNG.testing.StrengthAndConNumberPageTest.TTG_STR_002_verifyProductGroupInStrengthAndConditioning" duration-ms="9912" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TTG_WPP_003_verifyAddAvalibleProduct -->
-        <test-method signature="TTG_WPP_004_verifyShoppingProcess()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:27 EDT" name="TTG_WPP_004_verifyShoppingProcess" finished-at="2022-06-23T00:40:38 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_003_verifyAddAvalibleProduct" duration-ms="10898" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TTG_WPP_004_verifyShoppingProcess -->
-        <test-method signature="TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:38 EDT" name="TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn" finished-at="2022-06-23T00:40:58 EDT" depends-on-methods="techTriangle_testNG.testing.weightsProductTest.TTG_WPP_004_verifyShoppingProcess" duration-ms="19866" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:techTriangle_testNG.testing.weightsProductTest@659a969b]" started-at="2022-06-23T00:40:58 EDT" name="teardown" finished-at="2022-06-23T00:40:58 EDT" duration-ms="116" status="PASS">
+        </test-method> <!-- TTG_STR_003_verifyNumberPageProductDisplayed -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:techTriangle_testNG.testing.StrengthAndConNumberPageTest@3e92efc3]" started-at="2022-06-23T15:33:39 EDT" name="teardown" finished-at="2022-06-23T15:33:39 EDT" duration-ms="100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- techTriangle_testNG.testing.weightsProductTest -->
+      </class> <!-- techTriangle_testNG.testing.StrengthAndConNumberPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

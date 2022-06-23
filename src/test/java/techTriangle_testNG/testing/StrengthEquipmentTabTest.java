@@ -4,8 +4,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
-import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 import techTriangle_testNG.utilities.Constants;
 

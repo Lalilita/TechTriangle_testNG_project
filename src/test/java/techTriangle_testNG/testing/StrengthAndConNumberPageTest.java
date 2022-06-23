@@ -29,7 +29,7 @@ public class StrengthAndConNumberPageTest extends CommonMethods{
 	}
 	
 	@Test(dependsOnMethods = "TTG_STR_001_verifyStrengthAndConditioningTab")
-	public void TTG_STR_002_verifyProductGroupInStrengthAndConditioning() {
+	public void TTG_STR_002_verifyProductGroupInStrengthAndConditioning() { //bodyWeightGroup
 		strengthConPage.findSizeOfStrengthAndConProductGroups();
 		strengthConPage.verifyStrengthAndConProductGroupsIsClickable();
 	}

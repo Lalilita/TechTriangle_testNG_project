@@ -6,13 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="techTriangle_testNG.testing.FitnessAccessoriesTabTest">
-        <methods>
-          <include name="SetUp"/>
-          <include name="TearDown"/>
-          <include name="ValidateNumberItem"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.FitnessAccessoriesTabTest -->
       <class name="techTriangle_testNG.testing.StrengthEquipmentTabTest">
         <methods>
           <include name="TearDown"/>
@@ -20,6 +13,21 @@
           <include name="SetUp"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.StrengthEquipmentTabTest -->
+      <class name="techTriangle_testNG.testing.FitnessAccessoriesTabTest">
+        <methods>
+          <include name="SetUp"/>
+          <include name="TearDown"/>
+          <include name="ValidateNumberItem"/>
+        </methods>
+      </class> <!-- techTriangle_testNG.testing.FitnessAccessoriesTabTest -->
+      <class name="techTriangle_testNG.testing.LoginTest">
+        <methods>
+          <include name="TTG_LOGIN_001_to_006" invocation-numbers="5"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="TTG_LOGIN_007" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- techTriangle_testNG.testing.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
