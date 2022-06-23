@@ -35,7 +35,6 @@ public class EbikesPage extends CommonMethods{
 	public WebElement closeTab;
 	
 	public void verifyBikeImageCount() {
-		
 		CommonMethods.click(ebikesTap);
 		Assert.assertTrue(ebikesTap.isEnabled());
 		CommonMethods.jsClick(EnlargeBikeImage);

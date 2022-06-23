@@ -23,7 +23,6 @@ public class Test_HomePage extends CommonMethods {
 		BaseClass.getDriver().close();
 	}
 	
-
 	@Test (priority = 1)
 	public void homePage_imageClickable() {
 		homePage.verifyImagesClickable();
