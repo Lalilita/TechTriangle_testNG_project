@@ -1,5 +1,6 @@
 package techTriangle_testNG.testing;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -66,7 +67,12 @@ public class HomePageSignUp {
 
 //	1.1 Enter valid email, valid password
 //	and valid Billing info
-	// already success, can not use same email again fitnessavenueTC@gmail.com
+	
+	public String generateEmailAddress() {
+        Random rd = new Random();
+        int randomNum = rd.nextInt(10000);
+        return randomNum + "abc@mail.com";
+    }
 	@Ignore
 	@Test
 	public void _0101SignUp() {
@@ -74,7 +80,7 @@ public class HomePageSignUp {
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[4]/a[2]")).click();
 		//*[@id="header"]/div[4]/a[2]
 		
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("fitnessavenueTC@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(generateEmailAddress());
 		//*[@id="email"]
 		
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("fitnessavenue");
@@ -213,6 +219,7 @@ public class HomePageSignUp {
 //	4.1 Enter invalid email and invalid password
 //	and valid Billing info
 	// There is no invalid password
+	
 	@Test
 	public void _0401invalidEmailInvalidPassword() {
 		
@@ -247,6 +254,7 @@ public class HomePageSignUp {
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
 		//*[@id="NewCustomer"]/div[1]/div/table/tbody/tr[2]/td[2]/label
 	}
+	
 	
 	@AfterMethod
 	public void tearDown() {
