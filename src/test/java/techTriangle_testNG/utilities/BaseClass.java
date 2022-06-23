@@ -1,6 +1,5 @@
 package techTriangle_testNG.utilities;
 
-import org.testng.annotations.AfterMethod;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;

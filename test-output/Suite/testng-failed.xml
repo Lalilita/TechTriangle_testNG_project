@@ -8,59 +8,15 @@
     <classes>
       <class name="techTriangle_testNG.testing.FitnessAccessoriesTabTest">
         <methods>
-          <include name="ValidateListItem"/>
-          <include name="ValidateTabLink"/>
           <include name="SetUp"/>
-          <include name="tearDown"/>
           <include name="TearDown"/>
           <include name="ValidateNumberItem"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.FitnessAccessoriesTabTest -->
-      <class name="techTriangle_testNG.testing.ShippingEstimateTest">
-        <methods>
-          <include name="TearDown"/>
-          <include name="VerifyLogin" invocation-numbers="0 1 2"/>
-          <include name="tearDown"/>
-          <include name="SetUp"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.ShippingEstimateTest -->
-      <class name="techTriangle_testNG.testing.HomePageSlideTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyArrowLeftFunction"/>
-          <include name="SetUp"/>
-          <include name="TearDown"/>
-          <include name="verifySlideClickable"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.HomePageSlideTest -->
-      <class name="techTriangle_testNG.testing.weightsProductTest">
-        <methods>
-          <include name="TTG_WPP_001_verifyWeightsTab"/>
-          <include name="setup"/>
-          <include name="TTG_WPP_004_verifyShoppingProcess"/>
-          <include name="teardown"/>
-          <include name="TTG_WPP_003_verifyAddAvalibleProduct"/>
-          <include name="tearDown"/>
-          <include name="TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn"/>
-          <include name="TTG_WPP_002_verifyAddOutOfStockProduct"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.weightsProductTest -->
-      <class name="techTriangle_testNG.testing.StrengthAndConNumberPageTest">
-        <methods>
-          <include name="TTG_STR_002_verifyProductGroupInStrengthAndConditioning"/>
-          <include name="teardown"/>
-          <include name="TTG_STR_001_verifyStrengthAndConditioningTab"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="TTG_STR_003_verifyNumberPageProductDisplayed"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.StrengthAndConNumberPageTest -->
       <class name="techTriangle_testNG.testing.StrengthEquipmentTabTest">
         <methods>
           <include name="TearDown"/>
-          <include name="tearDown"/>
           <include name="ValidateNumberItem"/>
-          <include name="ValidateTabLink"/>
           <include name="SetUp"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.StrengthEquipmentTabTest -->
