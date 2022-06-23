@@ -42,7 +42,6 @@ public class BaseClass {
 		return driver;
 	}
 
-	@AfterMethod
 	public static void tearDown() {
 		if (driver != null) {
 			driver.quit();
