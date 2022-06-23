@@ -14,6 +14,22 @@ public class BoxingPage extends CommonMethods{
 	
 //	@FindBy(xpath = " ")
 //	public WebElement ;
+	
+	@FindBy(xpath = "//a[text()='Boxing/MMA']")
+        public WebElement boxingTab ;
+    
+	// ItemAr02
+	@FindBy(xpath = "//select[@ng-model='searchCtrl.params.limit']")
+    	public WebElement displayDropdown ;
+	
+	// ItemAr0301 ItemAr0302
+    	@FindBy(xpath = "//select[@ng-model='searchCtrl.params.sortBy']")
+    	public WebElement sortByDropdown ;
+    
+    	// ItemAr0303
+    	@FindBy(xpath = "//a[contains(@data-bind,'html: product.title')]")
+    	public List <WebElement> shortDescripList ;
+	
 
 }	
 	
