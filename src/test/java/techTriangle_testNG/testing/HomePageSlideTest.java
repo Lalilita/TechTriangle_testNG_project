@@ -9,7 +9,7 @@ import techTriangle_testNG.utilities.CommonMethods;
 public class HomePageSlideTest extends CommonMethods{
 	@BeforeClass
 	public void SetUp() throws InterruptedException {
-		BaseClass.getDriver();
+		getDriver();
 
 	}
 
@@ -32,7 +32,7 @@ public class HomePageSlideTest extends CommonMethods{
 
 	@AfterClass
 	public void TearDown() {
-		BaseClass.tearDown();
+		tearDown();
 	}
 
 }
