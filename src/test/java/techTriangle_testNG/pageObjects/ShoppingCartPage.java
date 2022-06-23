@@ -1,7 +1,10 @@
 package techTriangle_testNG.pageObjects;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -78,6 +81,11 @@ public class ShoppingCartPage extends CommonMethods {
   
     @FindBy(xpath = "(//table[@class='table table-striped table-hover small']/tbody/tr)[1]/td[2]")
     public WebElement ShippingPrice;
+    
+    @FindBy(xpath = "//td[@ng-bind='rate.translated_name + rate.translated_speed']")
+    public List<WebElement> ShippingProviders;
+    
+  
 
 	// -------------- Methods -------------- //
 
@@ -145,7 +153,18 @@ public class ShoppingCartPage extends CommonMethods {
 		double ProductPrice = Double.parseDouble(ShippingPrice.getText().substring(1));
 		System.out.println(ShippingService.getText());
 		System.out.println(ProductPrice);
-		Assert.assertTrue(ShippingService.isDisplayed() && ProductPrice > 0);
+		
+		
+		List<String>ShippingProviderList = new ArrayList<>();
+		
+		int i = 0;
+		for(WebElement p : ShippingProviders) {
+			ShippingProviderList.add(p.getText());
+			System.out.println(ShippingProviderList.get(i));
+			i++;
+		}
+	   
+		Assert.assertTrue(ShippingService.isDisplayed() && ProductPrice > 0 && ShippingProviderList.size()>=1);
 
 	}
 

@@ -3,6 +3,7 @@ package techTriangle_testNG.testing;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
@@ -12,7 +13,7 @@ public class FitnessAccessoriesTabTest extends CommonMethods{
  
 	@BeforeClass
 	public void SetUp() throws InterruptedException {
-		BaseClass.getDriver();
+		getDriver();
 
 	}
 	
@@ -28,7 +29,7 @@ public class FitnessAccessoriesTabTest extends CommonMethods{
 		int CountItemonPage = accessoriesPage.CountItemFitnessAccessoriesPage();
 		
 		//It's failed because the number of Items are not equal
-		AssertJUnit.assertEquals(CountItemonPage , CountItemonTab);
+		Assert.assertEquals(CountItemonPage, CountItemonTab);
 	}
 
 	@Test(priority = 3)
@@ -39,7 +40,7 @@ public class FitnessAccessoriesTabTest extends CommonMethods{
 
 	@AfterClass
 	public void TearDown() {
-		BaseClass.tearDown();
+		tearDown();
 	}
 	
 	

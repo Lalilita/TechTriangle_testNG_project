@@ -13,7 +13,7 @@ public class ShippingEstimateTest extends CommonMethods{
 	
 	@BeforeClass
 	  public void SetUp() throws InterruptedException {
-		  BaseClass.getDriver();
+		  getDriver();
 		  homePage.viewAllItem.click();
 		  homePage.AddToCartItem2.click();
 		  homePage.CartItem.click();	  
@@ -43,7 +43,7 @@ public class ShippingEstimateTest extends CommonMethods{
 
 	  @AfterClass
 	  public void TearDown() {
-		  BaseClass.tearDown();
+		  tearDown();
 	  }
 }
 
