@@ -55,6 +55,10 @@ public class HomePage extends CommonMethods{
 		
 	}
 	
+	public void goToStrengthAndConPage() {
+		strengthAndConTab.click();
+	}
+	
 	public void goToWeightsPage() {
 		weightsTab.click();
 	}

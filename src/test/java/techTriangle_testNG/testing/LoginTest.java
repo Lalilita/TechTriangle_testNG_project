@@ -1,31 +1,27 @@
 package techTriangle_testNG.testing;
 
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
 public class LoginTest extends CommonMethods{
 
-	WebDriver driver;
+	WebDriver driver;			
 
 	@BeforeClass
 	public void setup() {
-		BaseClass.getDriver();
+		getDriver();
 		homePage.goToLogin();
 	}
 
 	@AfterClass
 	public void teardown() {
-		System.out.println("browser closed");
+		tearDown();
 	}
 	
     @DataProvider

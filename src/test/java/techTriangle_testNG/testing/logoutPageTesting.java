@@ -6,16 +6,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
-public class Template extends CommonMethods{
+public class logoutPageTesting extends CommonMethods{
 
 	WebDriver driver;
 
 	@BeforeClass
 	public void setup() {
-		getDriver();
+		BaseClass.getDriver();
 	}
 
 	@AfterClass
@@ -25,6 +26,7 @@ public class Template extends CommonMethods{
   
 	@Test
 	public void test() {
+		
 	}
 
 }
