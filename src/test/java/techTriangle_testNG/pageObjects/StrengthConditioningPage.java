@@ -64,14 +64,15 @@ public class StrengthConditioningPage extends CommonMethods{
 		Thread.sleep(1000);
 		int displayNumber = Integer.parseInt(displayValue.get(i).getText());
 		int productDisplayNumber = bodyWeightProducts.size();
-		int expectedNumberPages = pageNumberDisplayed.size();
+		int expectedNumberPages = pageNumberDisplayed.size();          //total = 37
 		int actualNumberPages = (Integer.parseInt(getProperty("totalProductInBodyWeigthGroup"))/displayNumber)+1;
 		Assert.assertTrue(productDisplayNumber <= displayNumber);
 		Assert.assertEquals(expectedNumberPages, actualNumberPages);
 		System.out.println("displayNumber = " +  displayNumber +
 				" productDisplayNumber = " + productDisplayNumber+
 				" expectedNumberPages = " + expectedNumberPages+
-				" actualNumberPages = " + actualNumberPages);		
+				" actualNumberPages = " + actualNumberPages);	
+		
 		}
 	}
 }

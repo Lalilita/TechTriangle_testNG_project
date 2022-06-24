@@ -33,16 +33,6 @@ public class WeightsPage extends CommonMethods{
 		System.out.println("Weights product tab is navigated to Weights product pages");	
 	}
 	
-	public void verifyNotAbleToAddOutOfStockProductToCart() {
-		scrollToElement(dumbbellsWidget);
-		dumbbellsWidget.click();
-		dumbbellsPage.goToVirginRubberDumbbellsPage();
-		dumbbellVgRbPage.goToVirginRubber60lbsPage();
-		Assert.assertFalse(dumbbell60VgRbPagePage.addToCartBtn.isDisplayed());
-		System.out.println("Add to cart button is not displayed");	
-		Assert.assertTrue(dumbbell60VgRbPagePage.outOfStockText.isDisplayed());
-		System.out.println("Out of Stock  is displayed");	
-	}
 
 }	
 	

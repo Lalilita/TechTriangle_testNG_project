@@ -25,8 +25,5 @@ public class DumbbellsPage extends CommonMethods{
 		virginRubberDumbbellsWidget.click();
 	}
 
-	
-	
-	
 }	
 	

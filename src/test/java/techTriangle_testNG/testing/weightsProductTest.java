@@ -19,11 +19,12 @@ public class weightsProductTest extends CommonMethods{
 
 	@BeforeClass
 	public void setup() {
-		BaseClass.getDriver();
+		getDriver();
 	}
 
 	@AfterClass
 	public void teardown() {
+		tearDown();
 	}
   
 	@Test
@@ -33,20 +34,20 @@ public class weightsProductTest extends CommonMethods{
 	
 	@Test(dependsOnMethods = "TTG_WPP_001_verifyWeightsTab")
 	public void TTG_WPP_002_verifyAddOutOfStockProduct() {
-		weightsPage.verifyNotAbleToAddOutOfStockProductToCart();
+		dumbbell60VgRbPage.verifyNotAbleToAddOutOfStockProductToCart();
 	}
 
 	@Test(dependsOnMethods = "TTG_WPP_002_verifyAddOutOfStockProduct")
 	public void TTG_WPP_003_verifyAddAvalibleProduct() {
 		BaseClass.driver.navigate().back();
 		dumbbellVgRbPage.goToVirginRubber55lbsPage();
-		dumbbell55VgRbPagePage.verifyProductDetailsAreDisplayed();
-		dumbbell55VgRbPagePage.verifyAddToCartBtnDisplayAndClickable();
+		dumbbell55VgRbPage.verifyProductDetailsAreDisplayed();
+		dumbbell55VgRbPage.verifyAddToCartBtnDisplayAndClickable();
 	}
 	
 	@Test(dependsOnMethods = "TTG_WPP_003_verifyAddAvalibleProduct")
 	public void TTG_WPP_004_verifyShoppingProcess() throws InterruptedException {
-		dumbbell55VgRbPagePage.addItemTocartAndGoToShoppingCartPage();
+		dumbbell55VgRbPage.addItemTocartAndGoToShoppingCartPage();
 		cartPage.updateQty(getProperty("firstQty"));
 		Thread.sleep(1000);
 		cartPage.updateQty(getProperty("secondQty"));
