@@ -15,12 +15,14 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class CommonMethods extends PageInitializer {
 
@@ -321,4 +323,16 @@ public class CommonMethods extends PageInitializer {
 		int randomNum = rd.nextInt(1000);
 		return sb.toString() + randomNum + "@mail.com";
 	}
+	
+	public static boolean isClickable(WebElement el, WebDriver driver) 
+    {
+        try{
+            WebDriverWait wait = new WebDriverWait(driver, 6);
+            wait.until(ExpectedConditions.elementToBeClickable(el));
+            return true;
+        }
+        catch (Exception e){
+            return false;
+        }
+    }
 }
