@@ -83,6 +83,9 @@ public class ShoppingCartPage extends CommonMethods {
     @FindBy(xpath = "//td[@ng-bind='rate.translated_name + rate.translated_speed']")
     public List<WebElement> ShippingProviders;
     
+    @FindBy(xpath = "//div[@id='shipping-estimates-errors']/ul/li/span")
+    public WebElement ShippingErrorMessage;
+    
   
 
 	// -------------- Methods -------------- //
@@ -137,43 +140,52 @@ public class ShoppingCartPage extends CommonMethods {
 	}
 	
 	// Ratthanon
-	public void AddValidInformation() throws InterruptedException {
+		public void AddValidInformation() throws InterruptedException {
 
-		InputPostalCode.sendKeys(Constants.zipcodeEstimate);
-		InputCity.sendKeys(Constants.cityEstimate);
-		CommonMethods.selectDropDownValue(CountrySelect, Constants.CountryEstimate);
-		Thread.sleep(2000);
-		CommonMethods.selectDropDownValue(RegionSelect, Constants.stateEstimate);
-	}
-
-	public void VadidateShippingEstimate() {
-		ButtonEstimate.click();
-		double ProductPrice = Double.parseDouble(ShippingPrice.getText().substring(1));
-		System.out.println(ShippingService.getText());
-		System.out.println(ProductPrice);
-		
-		
-		List<String>ShippingProviderList = new ArrayList<>();
-		
-		int i = 0;
-		for(WebElement p : ShippingProviders) {
-			ShippingProviderList.add(p.getText());
-			System.out.println(ShippingProviderList.get(i));
-			i++;
+			InputPostalCode.sendKeys(Constants.zipcodeEstimate);
+			InputCity.sendKeys(Constants.cityEstimate);
+			selectDropDownValue(CountrySelect, Constants.CountryEstimate);
+			Thread.sleep(2000);
+			selectDropDownValue(RegionSelect, Constants.stateEstimate);
 		}
-	   
-		Assert.assertTrue(ShippingService.isDisplayed() && ProductPrice > 0 && ShippingProviderList.size()>=1);
 
-	}
+		public void VadidateShippingEstimate() {
+			ButtonEstimate.click();
+			double ProductPrice = Double.parseDouble(ShippingPrice.getText().substring(1));
+			System.out.println(ShippingService.getText());
+			System.out.println(ProductPrice);
+					
+			List<String>ShippingProviderList = new ArrayList<>();
+			
+			int i = 0;
+			for(WebElement p : ShippingProviders) {
+				ShippingProviderList.add(p.getText());
+				System.out.println(ShippingProviderList.get(i));
+				i++;
+			}
+		   
+			Assert.assertTrue(ShippingService.isDisplayed() && ProductPrice > 0 && ShippingProviderList.size()>=1);
 
-	public void ClearData(String country, String region) {
-		InputPostalCode.clear();
-		InputCity.clear();
-		if (region.equals("")) {
-			CommonMethods.selectDropDownValue(CountryNoselect, Constants.CountryOutsiteUS);
 		}
-		// selectElement.deselectAll();
-	}
+		
+		public void AddInvalidInformation(String region,String zipcode,String city,String country) {
+			ClearData(region);
+			InputPostalCode.sendKeys(zipcode);
+			InputCity.sendKeys(city);
+			if(country != "") {
+				selectDropDownValue(cartPage.RegionNoSelect, region);
+			}
+			
+		}
+
+		public void ClearData(String region) {
+			InputPostalCode.clear();
+			InputCity.clear();
+			if (region.equals("")) {
+				selectDropDownValue(CountryNoselect, Constants.CountryOutsiteUS);
+			}
+			
+		}
 		
 
 }

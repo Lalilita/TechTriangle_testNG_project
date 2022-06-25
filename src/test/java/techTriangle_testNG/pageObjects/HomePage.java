@@ -116,98 +116,96 @@ public class HomePage extends CommonMethods{
 	}
 	
 	//Method Ratthanon
-	public void checkArrowFunction(WebElement arrowType) throws InterruptedException {
-		int count = 0;
-		String ResultText = "";
-		for (int i = 0; i < slidePictureNumber() + 1; i++) {
-			arrowType.click();
-			Thread.sleep(1000);
-			if (!ResultText.contains(SlidePictureCurrent.getAttribute("href"))) {
-				ResultText += SlidePictureCurrent.getAttribute("href") + " ";
-				count++;
-			} else {
-				System.out.println("Repeate slide");
-				break;
+		public void checkArrowFunction(WebElement arrowType) throws InterruptedException {
+			int count = 0;
+			String ResultText = "";
+			for (int i = 0; i < slidePictureNumber() + 1; i++) {
+				arrowType.click();
+				Thread.sleep(1000);
+				if (!ResultText.contains(SlidePictureCurrent.getAttribute("href"))) {
+					ResultText += SlidePictureCurrent.getAttribute("href") + " ";
+					count++;
+				} else {
+					System.out.println("Repeate slide");
+					break;
+				}
+
 			}
+			Assert.assertEquals(count, SlidePicture.size());
 
 		}
-		Assert.assertEquals(count, SlidePicture.size());
+	    
 
-	}
-    
+		public int slidePictureNumber() {
+			return SlidePicture.size();
 
-	public int slidePictureNumber() {
-		return SlidePicture.size();
-
-	}
-	
-	public void validateSlideClickable() throws InterruptedException {
-		for (int i = 0; i < slidePictureNumber(); i++) {
-			String url =  SlidePictureCurrent.getAttribute("href").toLowerCase();
-			String nameItems = "";
-			System.out.println(url);
-			SlidePictureCurrent.click();
-		
-			if(BaseClass.getDriver().getCurrentUrl().contains(Constants.SpecialDisplay)) {
-				nameItems = TextDisplayItem2.getText().replace(" ","-").toLowerCase();
-				System.out.println(nameItems);
-			}else {
-				nameItems = TextDisplayItem.getText().replace(" ","-").toLowerCase();
-				System.out.println(nameItems);
-			}
-			
-			Assert.assertTrue(url.contains(nameItems));
-			
-			BaseClass.getDriver().navigate().back();
-			
-			for(int j=0;j<=i;j++) {
-			SlideArrowRightButton.click();
-			Thread.sleep(1000);
-			}
 		}
 		
-	}
-	
-	public void verifyLinkTab(String[] WebTab,WebElement typeTab) throws InterruptedException {		    
-		 
-	    for(int i=0;i<WebTab.length;i++) {
-	    	WebElement items = BaseClass.getDriver().findElement(By.xpath("//a[text()='"+WebTab[i]+"']"));
-	    	CommonMethods.hover(typeTab);
-			items.click();	
+		public void validateSlideClickable() throws InterruptedException {
+			for (int i = 0; i < slidePictureNumber(); i++) {
+				String url =  SlidePictureCurrent.getAttribute("href").toLowerCase();
+				String nameItems = "";
+				System.out.println(url);
+				SlidePictureCurrent.click();
 			
-			//int qty = Integer.parseInt((NumItemFound.getText().split(" "))[0]);
-			Assert.assertEquals(removeAllNonAlphaNumeric(ItemCatalog.getText()), removeAllNonAlphaNumeric(WebTab[i]));
-			Thread.sleep(1000);
-			BaseClass.getDriver().navigate().back();
-	    	
+				if(getDriver().getCurrentUrl().contains(Constants.SpecialDisplay)) {
+					nameItems = TextDisplayItem2.getText().replace(" ","-").toLowerCase();
+					System.out.println(nameItems);
+				}else {
+					nameItems = TextDisplayItem.getText().replace(" ","-").toLowerCase();
+					System.out.println(nameItems);
+				}
+				
+				Assert.assertTrue(url.contains(nameItems));
+				
+				getDriver().navigate().back();
+				
+				for(int j=0;j<=i;j++) {
+				SlideArrowRightButton.click();
+				Thread.sleep(1000);
+				}
+			}
+			
+		}
+		
+		public void verifyLinkTab(String[] WebTab,WebElement typeTab) throws InterruptedException {		    
+			 
+		    for(int i=0;i<WebTab.length;i++) {
+		    	WebElement items = getDriver().findElement(By.xpath("//a[text()='"+WebTab[i]+"']"));
+		    	hover(typeTab);
+				items.click();	
+				
+				Assert.assertEquals(removeAllNonAlphaNumeric(ItemCatalog.getText()), removeAllNonAlphaNumeric(WebTab[i]));
+				Thread.sleep(1000);
+				getDriver().navigate().back();
+		    	
+		    }
+
+	 }
+		
+		public int CountItemonTab(List<WebElement> ItemCount) {	        
+		      return  ItemCount.size(); 
+		}
+		
+
+		public void validateListItem(String[] tab,WebElement elementtab, List<WebElement> tabLink) {
+			List<String> nameList = new ArrayList<>(Arrays.asList(tab));
+			hover(elementtab);
+		        
+		        for(int i = 0; i<tabLink.size(); i++) {
+		            String Itemtext = tabLink.get(i).getText();
+		            System.out.println(Itemtext);
+		            Assert.assertTrue(nameList.contains(Itemtext));
+		        }		
+			
+		}
+		
+		public String removeAllNonAlphaNumeric(String s) {
+	        if (s == null) {
+	            return null;
+	        }
+	        return s.replaceAll("[^\\p{Alnum}]", "");
 	    }
-
- }
-	
-	public int CountItemonTab(List<WebElement> ItemCount) {	        
-	      return  ItemCount.size(); 
-	}
-	
-
-	public void validateListItem(String[] tab,WebElement elementtab, List<WebElement> tabLink) {
-		List<String> nameList = new ArrayList<>(Arrays.asList(tab));
-		Actions action = new Actions(BaseClass.getDriver());
-		 action.moveToElement(elementtab).perform();
-	        
-	        for(int i = 0; i<tabLink.size(); i++) {
-	            String Itemtext = tabLink.get(i).getText();
-	            System.out.println(Itemtext);
-	            Assert.assertTrue(nameList.contains(Itemtext));
-	        }		
-		
-	}
-	
-	public String removeAllNonAlphaNumeric(String s) {
-        if (s == null) {
-            return null;
-        }
-        return s.replaceAll("[^\\p{Alnum}]", "");
-    }
 	
 
 	

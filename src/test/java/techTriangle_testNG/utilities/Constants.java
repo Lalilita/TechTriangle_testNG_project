@@ -35,11 +35,16 @@ public class Constants {
 	
 	//Input for shipping Estimate 
 	public static final String cityEstimate = "Sterling";
+	public static final String cityEstimateIvalid = "CitySterling";
 	public static final String CountryEstimate = "United States";
 	public static final String CountryOutsiteUS = "Canada";
 	public static final String stateEstimate = "Virginia";
+	public static final String stateEstimateInvalid = "Washington";
 	public static final String zipcodeEstimate = "20166";
-	public static final String SpecialDisplay = "AmStaff-Fitness-SpaceSmart";
+	public static final String Invalidzipcode ="20888";
+	public static final String SpecialDisplay = "AmStaff-Fitness-SpaceSmart";	
+	public static final String InvalidZipMessage = "FedEx shipping : Destination postal code missing or invalid.";
+	public static final String ZipcodeMismatchMessage = "FedEx shipping : Destination Postal-State Mismatch.";
 	
 	
 	
