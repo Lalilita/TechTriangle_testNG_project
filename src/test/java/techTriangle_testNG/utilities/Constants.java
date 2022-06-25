@@ -48,4 +48,12 @@ public class Constants {
 	
 	
 	
+	
+	
+	//Tola 
+	public static final String quantityAdd = "2";
+	public static final int homePageImageNum = 5;
+	public static final int numberofBike = 7;
+	public static final int standardwait_time = 3;
+	
 }	
