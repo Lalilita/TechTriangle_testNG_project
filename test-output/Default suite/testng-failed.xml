@@ -5,10 +5,9 @@
     <classes>
       <class name="techTriangle_testNG.testing.LoginTest">
         <methods>
-          <include name="TTG_LOGIN_001_to_006" invocation-numbers="5"/>
+          <include name="TTG_LOGIN_007_verifyLoginSuccess" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="TTG_LOGIN_007" invocation-numbers="0"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.LoginTest -->
     </classes>

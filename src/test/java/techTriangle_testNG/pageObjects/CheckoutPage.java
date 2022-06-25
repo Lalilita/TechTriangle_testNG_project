@@ -108,11 +108,11 @@ public class CheckoutPage extends CommonMethods {
 		return reviewOrderList;
 	}
 
-	public void verifyReviewOrderIsCorrect(ArrayList<String> cartList, ArrayList<String> checkoutList) {
+	public void verifyReviewOrderEqualsToCartOrder(ArrayList<String> cartList, ArrayList<String> reviewOrderList) {
 		scrollToElement(productPart);
 		System.out.println(cartList);
-		System.out.println(checkoutList);
-		Assert.assertEquals(cartList, checkoutList);
+		System.out.println(reviewOrderList);
+		Assert.assertEquals(cartList, reviewOrderList);
 		System.out.println("Cart order and Checkout order are matched");
 	}
 

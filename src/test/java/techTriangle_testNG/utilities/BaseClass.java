@@ -40,7 +40,7 @@ public class BaseClass {
 		}
 		return driver;
 	}
-	
+
 	public static void tearDown() {
 		if (driver != null) {
 			driver.quit();

@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
@@ -48,13 +47,13 @@ public class weightsProductTest extends CommonMethods{
 	@Test(dependsOnMethods = "TTG_WPP_003_verifyAddAvalibleProduct")
 	public void TTG_WPP_004_verifyShoppingProcess() throws InterruptedException {
 		dumbbell55VgRbPage.addItemTocartAndGoToShoppingCartPage();
-		cartPage.updateQty(getProperty("firstQty"));
+		cartPage.verifyUpdateQty(getProperty("firstQty"));
 		Thread.sleep(1000);
-		cartPage.updateQty(getProperty("secondQty"));
+		cartPage.verifyUpdateQty(getProperty("secondQty"));
 		ArrayList<String> cartList = cartPage.getListOfAddedProduct();
 		cartPage.goToCheckOutProcess();
 		checkPage.enterBillingInfo();
-		checkPage.verifyReviewOrderIsCorrect(cartList, checkPage.getListOfReviewOrder());
+		checkPage.verifyReviewOrderEqualsToCartOrder(cartList, checkPage.getListOfReviewOrder());
 		checkPage.verifyPlaceOrederBtnIsEnable();
 	}
 	
@@ -63,18 +62,6 @@ public class weightsProductTest extends CommonMethods{
 		checkPage.previewCart();
 		cartPage.verifyClearBtn();
 	}
-	
-	
-
-	
-
-
-	
-	
-	
-	
-	
-	
 	
 	
 }

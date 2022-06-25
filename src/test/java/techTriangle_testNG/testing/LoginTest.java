@@ -1,11 +1,11 @@
 package techTriangle_testNG.testing;
 
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.DataProvider;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
@@ -45,13 +45,13 @@ public class LoginTest extends CommonMethods{
 	
   
 	@Test(dataProvider = "invalidUsernamesAndPasswords")
-	public void TTG_LOGIN_001_to_006(String username, String password) {
+	public void TTG_LOGIN_001_to_006_verifyLoginFailed(String username, String password) {
 		loginPage.loginToHomepage(username, password);	
 		loginPage.verifyLoginFailed();
 	}
 	
 	@Test(dataProvider = "validUsernameAndPassword")
-	public void TTG_LOGIN_007(String username, String password) {
+	public void TTG_LOGIN_007_verifyLoginSuccess(String username, String password) {
 		loginPage.loginToHomepage(username, password);	
 		homePage.verifyLoginSuccess();
 	}
