@@ -3,6 +3,7 @@ package techTriangle_testNG.testing;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
 import techTriangle_testNG.utilities.CommonMethods;
@@ -15,29 +16,44 @@ public class ShippingEstimateTest extends CommonMethods{
 		  getDriver();
 		  homePage.viewAllItem.click();
 		  homePage.AddToCartItem2.click();
-		  homePage.CartItem.click();	  
+		  homePage.CartItem.click();
+		  cartPage.AddValidInformation();
 	  }
 	  
 
 	  @DataProvider(name="ShipmentDataprovider")
 		public Object[][] dpMethod() {
-			return new Object[][] {{ "", Constants.cityEstimate, Constants.CountryEstimate, Constants.stateEstimate}, {"", "", Constants.CountryEstimate, Constants.stateEstimate}, { "", "", "", ""}};
+			
+		  return new Object[][] {{Constants.Invalidzipcode,Constants.cityEstimate, Constants.CountryEstimate, Constants.stateEstimate,"true", Constants.InvalidZipMessage },
+			                     {Constants.zipcodeEstimate,Constants.cityEstimate, Constants.CountryEstimate, Constants.stateEstimateInvalid,"true",Constants.ZipcodeMismatchMessage},
+		                         { "", Constants.cityEstimate, Constants.CountryEstimate, Constants.stateEstimate,"false",""},
+		                         {"", "", Constants.CountryEstimate, Constants.stateEstimate,"false",""},
+		                         { "", "", "", "","false",""}
+		                         		                 
+		  }; 
 		} 
+	  
 		
 		@Test(priority = 1)
 		public void VerifyCartShipmentWithValidInfo() throws InterruptedException {
-			cartPage.AddValidInformation();
-			AssertJUnit.assertTrue(cartPage.ButtonEstimate.isEnabled());
+			Assert.assertTrue(cartPage.ButtonEstimate.isEnabled());
 			cartPage.VadidateShippingEstimate();
 		}	
 		
 		@Test(dataProvider = "ShipmentDataprovider", priority = 2)
-		public void VerifyLogin(String zipcode, String city, String country, String region) throws InterruptedException {
-			cartPage.ClearData(country,region);
-			cartPage.InputPostalCode.sendKeys(zipcode);
-			cartPage.InputCity.sendKeys(city);
-	        AssertJUnit.assertFalse(cartPage.ButtonEstimate.isEnabled());
-			Thread.sleep(3000);
+		public void VerifyLogin(String zipcode, String city, String country, String region,String result,String message) throws InterruptedException {
+			
+			boolean clickable =Boolean.parseBoolean(result);
+			cartPage.AddInvalidInformation(region,zipcode,city,country);
+			 
+			Assert.assertTrue(cartPage.ButtonEstimate.isEnabled()==clickable);
+			
+			if(clickable == true) {
+				cartPage.ButtonEstimate.click();
+				Assert.assertTrue(cartPage.ShippingErrorMessage.getText().contains(message));
+			}
+			
+			Thread.sleep(2000);
 		}
 
 	  @AfterClass
