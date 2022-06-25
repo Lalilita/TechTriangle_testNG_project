@@ -13,7 +13,7 @@ public class EbikesPage extends CommonMethods{
 
 	
 	public EbikesPage() {
-		PageFactory.initElements(BaseClass.getDriver(), this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
@@ -35,16 +35,16 @@ public class EbikesPage extends CommonMethods{
 	public WebElement closeTab;
 	
 	public void verifyBikeImageCount() {
-		CommonMethods.click(ebikesTap);
+		click(ebikesTap);
 		Assert.assertTrue(ebikesTap.isEnabled());
-		CommonMethods.jsClick(EnlargeBikeImage);
-		CommonMethods.wait(Constants.standardwait_time);
+		jsClick(EnlargeBikeImage);
+		wait(Constants.standardwait_time);
 		String expectedBikeName = bikeName.getText();
 		System.out.println(expectedBikeName);
 		Assert.assertTrue(expectedBikeName.contains("Bike"));
 		int bikeProductCount = 1;
 		for (int i = 1; i<Constants.numberofBike; i++) {
-			CommonMethods.wait(Constants.standardwait_time);
+			wait(Constants.standardwait_time);
 			forwardArrow.click();
 			bikeProductCount++;
 			expectedBikeName = bikeName.getText();
@@ -53,7 +53,7 @@ public class EbikesPage extends CommonMethods{
 		System.out.println("number of product listing on the page are: "+bikeProductCount);
 		Assert.assertTrue(bikeProductCount == Constants.numberofBike);
 		Assert.assertTrue(expectedBikeName.contains("Bike"));
-		CommonMethods.click(closeTab);
+		click(closeTab);
 	}
 
 }	

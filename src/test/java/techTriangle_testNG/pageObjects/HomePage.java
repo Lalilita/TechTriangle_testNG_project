@@ -19,7 +19,7 @@ import techTriangle_testNG.utilities.Constants;
 public class HomePage extends CommonMethods{
 
 	public HomePage() {
-		PageFactory.initElements(BaseClass.getDriver(), this);
+		PageFactory.initElements(getDriver(), this);
 	}
 //Add to cart testing	
 	@FindBy (xpath= "//a[@href='/zkett/kettlebells']//span//img")
@@ -70,14 +70,14 @@ public class HomePage extends CommonMethods{
 	
 	public void verifyImagesClickable() {
 		int imageNum = homePageProductImages.size();
-		CommonMethods.wait(3);
+		wait(Constants.standardwait_time);
 		System.out.println("Number of images in home pages: "+imageNum);
 		Assert.assertTrue(imageNum==Constants.homePageImageNum);
-		String baseUrl = BaseClass.getDriver().getCurrentUrl();
+		String baseUrl = getDriver().getCurrentUrl();
 		
 		 for(int i=0;i<imageNum;i++){
 			 WebElement listOfImage = homePageProductImages.get(i);
-			 CommonMethods.waitForClickability(listOfImage).click();
+			 waitForClickability(listOfImage).click();
 			 String newUrl = BaseClass.getDriver().getCurrentUrl();
 			 System.out.println("Base URL: "+ baseUrl);
 			 System.out.println("Current URL: "+newUrl);
@@ -87,13 +87,13 @@ public class HomePage extends CommonMethods{
 	}
 	
 	public void homePageAddItemToCart() {
-		CommonMethods.click(kettlebellsTab);
-		CommonMethods.getJSObject();
-		CommonMethods.ScrolByPixel(600);
-		CommonMethods.wait(2);
-		CommonMethods.click(bowflexSelectTech840);
+		click(kettlebellsTab);
+		getJSObject();
+		ScrolByPixel(600);
+		wait(Constants.standardwait_time);
+		click(bowflexSelectTech840);
 		Assert.assertTrue(addToCartButton.isEnabled());
-		CommonMethods.click(addToCartButton);
+		click(addToCartButton);
 		System.out.println("==Bowflex SelectTech 840 Adjustable Kettlebell==");
 		String shoppingCartBowflexSelectTech840 = cartQuantity_BowflexSelectTech840.getText();
 		System.out.println("Quantity :"+shoppingCartBowflexSelectTech840);
@@ -109,14 +109,14 @@ public class HomePage extends CommonMethods{
 		Assert.assertTrue(totalPrice.isDisplayed());
 	}
 	public void addMultipleItemsToCart() {
-		CommonMethods.click(homeButton);
-		CommonMethods.click(dumbbells);
-		CommonMethods.getJSObject();
-		CommonMethods.ScrolByPixel(500);
-		CommonMethods.click(bowflexSelectTech2080);
+		click(homeButton);
+		click(dumbbells);
+		getJSObject();
+		ScrolByPixel(600);
+		click(bowflexSelectTech2080);
 		quantityInput_BowflexSelectTech2080.clear();
-		CommonMethods.sendText(quantityInput_BowflexSelectTech2080, Constants.quantityAdd);
-		CommonMethods.click(addToCartButton);
+		sendText(quantityInput_BowflexSelectTech2080, Constants.quantityAdd);
+		click(addToCartButton);
 		System.out.println("===Bowflex SelectTech 2080 Upgrade - 40 lb Add-On===");
 		String shoppingCartQuanity2 = cartQuantity_BowflexSelectTech2080.getText();
 		System.out.println("Quantity :"+shoppingCartQuanity2);
@@ -158,6 +158,7 @@ public class HomePage extends CommonMethods{
 		String convertShoppingTotalPrice= shoppingTotalPrice.replaceAll("[$CADUSD]*", "");
 		double actualTotalPrice=Double.parseDouble(convertShoppingTotalPrice);
 		System.out.println("Actual total price is: "+(actualTotalPrice));
+		
 		Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
 	}
 	

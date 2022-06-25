@@ -14,13 +14,13 @@ public class Test_HomePage extends CommonMethods {
 	WebDriver driver;
 	@BeforeClass
 	public void setup() {
-		BaseClass.getDriver();
+		getDriver();
 	}
 
 	@AfterClass
 	public void teardown() {
 		System.out.println("browser closed");
-		BaseClass.getDriver().close();
+		getDriver().close();
 	}
 	
 	@Test (priority = 1)
