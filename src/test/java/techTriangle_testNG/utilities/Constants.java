@@ -46,12 +46,14 @@ public class Constants {
 	public static final String InvalidZipMessage = "FedEx shipping : Destination postal code missing or invalid.";
 	public static final String ZipcodeMismatchMessage = "FedEx shipping : Destination Postal-State Mismatch.";
 	
+	
+	
+	
+	
 	//Tola 
 	public static final String quantityAdd = "2";
 	public static final int homePageImageNum = 5;
 	public static final int numberofBike = 7;
 	public static final int standardwait_time = 3;
-	
-	
 	
 }	
