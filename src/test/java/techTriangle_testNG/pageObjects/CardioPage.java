@@ -17,19 +17,6 @@ public class CardioPage extends CommonMethods{
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 	
-	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/ZCAR/cardio']")
-	public WebElement cardioTab;
-	@FindBy( xpath = "/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[4]/div")
-	public List <WebElement> cardioPageProducts;
-	
-	
-	
-	public void numberOfProductInsideCardioPage() {
-		CommonMethods.click(cardioTab);
-		
-	}
-	
-	
 	
 		
 	
