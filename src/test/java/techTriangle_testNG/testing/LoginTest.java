@@ -11,7 +11,7 @@ import techTriangle_testNG.utilities.CommonMethods;
 
 public class LoginTest extends CommonMethods{
 
-	WebDriver driver;
+	WebDriver driver;			
 
 	@BeforeClass
 	public void setup() {
@@ -45,13 +45,13 @@ public class LoginTest extends CommonMethods{
 	
   
 	@Test(dataProvider = "invalidUsernamesAndPasswords")
-	public void TTG_LOGIN_001_to_006(String username, String password) {
+	public void TTG_LOGIN_001_to_006_verifyLoginFailed(String username, String password) {
 		loginPage.loginToHomepage(username, password);	
 		loginPage.verifyLoginFailed();
 	}
 	
 	@Test(dataProvider = "validUsernameAndPassword")
-	public void TTG_LOGIN_007(String username, String password) {
+	public void TTG_LOGIN_007_verifyLoginSuccess(String username, String password) {
 		loginPage.loginToHomepage(username, password);	
 		homePage.verifyLoginSuccess();
 	}

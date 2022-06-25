@@ -1,10 +1,8 @@
 package techTriangle_testNG.pageObjects;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +20,7 @@ public class ShoppingCartPage extends CommonMethods {
 	}
 
 	@FindBy(xpath = "//div[@class='widget product_part_num content']")
-	public WebElement productPartNumber;
+	public WebElement productPartNumber; 
 
 	@FindBy(xpath = "//div[@class='widget product_short_description']//a")
 	public WebElement productName;
@@ -71,7 +69,7 @@ public class ShoppingCartPage extends CommonMethods {
     public WebElement RegionSelect;
   
     @FindBy(xpath = "(//select[@class='form-control ng-valid ng-dirty ng-valid-parse ng-touched'])[2]")
-    public WebElement RegionNoSelect;
+    public WebElement RegionNoSelect;  
   
     @FindBy(xpath = "//button[@id='shipping-estimates-submit']")
     public WebElement ButtonEstimate;
@@ -96,7 +94,7 @@ public class ShoppingCartPage extends CommonMethods {
 		return num;
 	}
 
-	public void updateQty(String number) {
+	public void verifyUpdateQty(String number) {
 		qtyBox.sendKeys(Keys.BACK_SPACE);
 		qtyBox.sendKeys(Keys.BACK_SPACE);
 		sendText(qtyBox, number);

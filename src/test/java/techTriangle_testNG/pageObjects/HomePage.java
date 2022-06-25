@@ -82,11 +82,11 @@ public class HomePage extends CommonMethods{
 	 
 	
 	// -------------- Methods -------------- //
-	
+	// LoginTest
 	public void goToLogin() {
 		loginBtn.click();
 	}
-
+	// LoginTest
 	public void verifyLoginSuccess() {
 		Assert.assertTrue(logoutBtn.isDisplayed());
 		Assert.assertTrue(logoutBtn.isEnabled());
@@ -105,6 +105,10 @@ public class HomePage extends CommonMethods{
 		Assert.assertEquals(driver.getCurrentUrl(), Constants.strengthAndConUrl);
 		System.out.println("Page is navigated to Strength & Conditioning product pages");
 		
+	}
+	
+	public void goToStrengthAndConPage() {
+		strengthAndConTab.click();
 	}
 	
 	public void goToWeightsPage() {

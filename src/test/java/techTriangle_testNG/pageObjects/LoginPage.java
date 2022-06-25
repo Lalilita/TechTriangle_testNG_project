@@ -30,18 +30,18 @@ public class LoginPage extends CommonMethods{
 	
 	
 	// -------------- Methods -------------- //
-	
+	// LoginTest
 	public void loginToHomepage(String username, String password) {
 		sendText(emailInput, username);
 		sendText(passwordInput, password);
 		loginBtn.click();
 	}
-	
+	// LoginTest
 	public String getErrorText() {
 		String text = errorText.getText();
 		return text;
 	}
-	
+	// LoginTest
 	public void verifyLoginFailed() {
 		Assert.assertTrue(errorText.isDisplayed());
 		System.out.println(getErrorText());

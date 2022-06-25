@@ -33,8 +33,8 @@ public class PageInitializer extends BaseClass {
 	public static WeightsPage weightsPage;
 	public static DumbbellsPage dumbbellsPage;
 	public static DumbbellVgRbPage dumbbellVgRbPage;
-	public static Dumbbell60VgRbPage dumbbell60VgRbPagePage;
-	public static Dumbbell55VgRbPage dumbbell55VgRbPagePage;
+	public static Dumbbell60VgRbPage dumbbell60VgRbPage;
+	public static Dumbbell55VgRbPage dumbbell55VgRbPage;
 	public static BoxingPage boxingPage;
 	public static NewArrivalsPage arrivalPage;
 	
@@ -55,8 +55,8 @@ public class PageInitializer extends BaseClass {
 		weightsPage = new WeightsPage();
 		dumbbellsPage = new DumbbellsPage();
 		dumbbellVgRbPage = new DumbbellVgRbPage();
-		dumbbell60VgRbPagePage = new Dumbbell60VgRbPage();
-		dumbbell55VgRbPagePage = new Dumbbell55VgRbPage();
+		dumbbell60VgRbPage = new Dumbbell60VgRbPage();
+		dumbbell55VgRbPage = new Dumbbell55VgRbPage();
 		boxingPage = new BoxingPage();  
 		arrivalPage = new NewArrivalsPage(); 
 	}
