@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -21,7 +20,7 @@ public class HomePage extends CommonMethods {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 
-	// Lalita
+	// WebElement ------- Lalita
 	@FindBy(xpath = "//a[text()='Login']")
 	public WebElement loginBtn;
 
@@ -34,8 +33,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//a[@class='ng-binding ng-isolate-scope btn' and text()='Weights']")
 	public WebElement weightsTab;
 
-	
-	// Ratthanon
+	// WebElement ------- Ratthanon
 	@FindBy(xpath = "(//a[text()='View all'])[1]")
 	public WebElement viewAllItem;
 
@@ -81,8 +79,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav ng-scope']/li[4]/ul/li/div/div/div")
 	public List<WebElement> ItemCountFinessTab;
 
-	
-	// Tola
+	// WebElement ------- Tola
 	@FindBy(xpath = "//a[@href='/zkett/kettlebells']//span//img")
 	public WebElement kettlebellsTab;
 
@@ -125,42 +122,53 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//div[@class='widget_content']//span[@class='total_amount']")
 	public WebElement totalPrice;
 
+	// WebElement ------- Kong
+	@FindBy(xpath = "//a[normalize-space()='Fitness Accessories']")
+	public WebElement AccessoriesBtn;
+
+	@FindBy(xpath = "//img[@alt='Currency CAD']")
+	public WebElement canFlag;
+
+	@FindBy(xpath = "//img[@alt='Currency USD']")
+	public WebElement USAFlag;
+
+	@FindBy(xpath = "(//span[@class='discount_price'])[1]")
+	public WebElement productPrice;
+
+	// @FindBy(xpath =
+	// "//a[@href='https://www.fitnessavenue.ca/zjp/jump-ropes%27]%22"
+	// public WebElement jumpRope;
+
+	@FindBy(id = "login-username")
+	public WebElement logInputUser;
+
+	@FindBy(id = "login-password")
+	public WebElement InputPass;
+
+	@FindBy(id = "login-button")
+	public WebElement logInButton;
+
+	@FindBy(xpath = "//img[@alt='Shaker Bottles']")
+	public WebElement BottlesItemLink;
+
+	@FindBy(xpath = "(//select[@class='form-control ng-pristine ng-untouched ng-valid'])[3]")
+	public WebElement SortDropDown;
+
+	// WebElement ------- Kangkook
+	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[2]")
+	public WebElement signUpBtn;
+
+	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[1]")
+	public WebElement myAccountBtn;
 	
-	// Kong
-		@FindBy(xpath = "//a[normalize-space()='Fitness Accessories']")
-		public WebElement AccessoriesBtn;
+	@FindBy(xpath = "//input[@placeholder='keywords']")
+	public WebElement searchBox;
+	
+	@FindBy(xpath = "//input[@class='search-bar-button']")
+	public WebElement searchButton;
 
-		@FindBy(xpath = "//img[@alt='Currency CAD']")
-		public WebElement canFlag;
-
-		@FindBy(xpath = "//img[@alt='Currency USD']")
-		public WebElement USAFlag;
-
-		@FindBy(xpath = "(//span[@class='discount_price'])[1]")
-		public WebElement productPrice;
-
-		// @FindBy(xpath =
-		// "//a[@href='https://www.fitnessavenue.ca/zjp/jump-ropes%27]%22"
-		// public WebElement jumpRope;
-
-		@FindBy(id = "login-username")
-		public WebElement logInputUser;
-
-		@FindBy(id = "login-password")
-		public WebElement InputPass;
-
-		@FindBy(id = "login-button")
-		public WebElement logInButton;
-
-		@FindBy(xpath = "//img[@alt='Shaker Bottles']")
-		public WebElement BottlesItemLink;
-
-		@FindBy(xpath = "(//select[@class='form-control ng-pristine ng-untouched ng-valid'])[3]")
-		public WebElement SortDropDown;
-		
-		
 	// -------------- Methods -------------- //
-	
+
 	// Method ------- Lalita
 	public void goToLogin() {
 		loginBtn.click();
@@ -194,7 +202,6 @@ public class HomePage extends CommonMethods {
 		weightsTab.click();
 	}
 
-	
 	// Method ------- Ratthanon
 	public void checkArrowFunction(WebElement arrowType) throws InterruptedException {
 		int count = 0;
@@ -285,8 +292,6 @@ public class HomePage extends CommonMethods {
 		return s.replaceAll("[^\\p{Alnum}]", "");
 	}
 
-	
-	
 	// Method ------- Tola
 
 	// Home page image clickable
@@ -388,8 +393,6 @@ public class HomePage extends CommonMethods {
 		Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
 
 	}
-
-	
 
 	// Method ------- Kong
 	public void verifyCanadaCurrency() throws InterruptedException {
