@@ -9,8 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import techTriangle_testNG.utilities.BaseClass;
+import techTriangle_testNG.utilities.CommonMethods;
 
-public class SearchBoxTestingObject {
+public class SearchPage extends CommonMethods {
 
 
 	
@@ -18,22 +19,10 @@ public class SearchBoxTestingObject {
 	WebDriverWait wait;
 
 	
-	public SearchBoxTestingObject() {
+	public SearchPage() {
 	PageFactory.initElements(BaseClass.getDriver(), this);
 }
 
-	@FindBy(xpath="//*[@id=\"header\"]/div[4]/a[2]")
-	public WebElement signUpBtn;
-	
-	@FindBy(xpath="//*[@id=\"email\"]")
-	public WebElement email;
-	
-	@FindBy(xpath="//*[@id=\"password\"]")
-	public WebElement password;
-	
-	@FindBy(xpath="//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")
-	public WebElement newCustomer;
-	
 	@FindBy(xpath="//*[@id=\"header\"]/div[2]/form/input[1]")
 	public WebElement searchBox1;
 	

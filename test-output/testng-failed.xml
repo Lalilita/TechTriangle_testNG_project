@@ -5,9 +5,9 @@
     <classes>
       <class name="techTriangle_testNG.testing.EbikesPageTest">
         <methods>
-          <include name="VerifyProductListInsideEbikesPage"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="EB_04_VerifySortByPrice"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.EbikesPageTest -->
     </classes>

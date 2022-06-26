@@ -1,7 +1,6 @@
 package techTriangle_testNG.testing;
 
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -10,16 +9,30 @@ import techTriangle_testNG.utilities.CommonMethods;
 
 public class EbikesPageTest extends CommonMethods{
 
-//	WebDriver driver;
 
 	@BeforeClass
 	public void setup() {
 		getDriver();
 	}
 
-	@Test (enabled = true)
-	public void VerifyProductListInsideEbikesPage() {
-		ebikePage.verifyBikeImageCount();
+	@Test 
+	public void EB_01_VerifyEBikesTab() {
+		ebikePage.verifyEBikesTabIsEnableAndNavigateToEBikesPage();
+	}
+	
+	@Test 
+	public void EB_02_VerifySortByPartNumber() throws InterruptedException {
+		ebikePage.verifySortByPartNumberAsc();
+	}
+	
+	@Test 
+	public void EB_03_VerifySortByDescription() throws InterruptedException {
+		ebikePage.verifySortByShortDescriptionAsc();
+	}
+
+	@Test 
+	public void EB_04_VerifySortByPrice() throws InterruptedException {
+		ebikePage.verifySortByPriceAsc();
 	}
 	
 	@AfterClass

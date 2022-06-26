@@ -154,22 +154,10 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "(//select[@class='form-control ng-pristine ng-untouched ng-valid'])[3]")
 	public WebElement SortDropDown;
 
-	// WebElement ------- Kangkook
-	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[2]")
-	public WebElement signUpBtn;
-
-	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[1]")
-	public WebElement myAccountBtn;
-	
-	@FindBy(xpath = "//input[@placeholder='keywords']")
-	public WebElement searchBox;
-	
-	@FindBy(xpath = "//input[@class='search-bar-button']")
-	public WebElement searchButton;
-
 	// -------------- Methods -------------- //
 
 	// Method ------- Lalita
+	// LoginTest
 	public void goToLogin() {
 		loginBtn.click();
 	}
@@ -293,7 +281,6 @@ public class HomePage extends CommonMethods {
 	}
 
 	// Method ------- Tola
-
 	// Home page image clickable
 	@FindBy(xpath = "//*[@id='content']/div[3]/div")
 	public List<WebElement> homePageProductImages;
@@ -448,5 +435,16 @@ public class HomePage extends CommonMethods {
 		Assert.assertEquals(beforeFilterPriceList, afterFilterPriceList);
 
 	}
+
+	// WebElement ------- Kangkook
+	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[2]")
+	public WebElement signUpBtn;
+
+	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[1]")
+	public WebElement myAccountBtn;
+	
+	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
+	public WebElement ebikesTap; 
+
 
 }
