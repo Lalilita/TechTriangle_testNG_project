@@ -8,6 +8,7 @@ import techTriangle_testNG.pageObjects.Dumbbell55VgRbPage;
 import techTriangle_testNG.pageObjects.Dumbbell60VgRbPage;
 import techTriangle_testNG.pageObjects.DumbbellsPage;
 import techTriangle_testNG.pageObjects.EbikesPage;
+import techTriangle_testNG.pageObjects.FooterPage;
 import techTriangle_testNG.pageObjects.HomePage;
 import techTriangle_testNG.pageObjects.LoginPage;
 import techTriangle_testNG.pageObjects.NewArrivalsPage;
@@ -37,7 +38,7 @@ public class PageInitializer extends BaseClass {
 	public static Dumbbell55VgRbPage dumbbell55VgRbPage;
 	public static BoxingPage boxingPage;
 	public static NewArrivalsPage arrivalPage;
-	
+	public static FooterPage footerPage;
 	
 	
 	
@@ -58,7 +59,9 @@ public class PageInitializer extends BaseClass {
 		dumbbell60VgRbPage = new Dumbbell60VgRbPage();
 		dumbbell55VgRbPage = new Dumbbell55VgRbPage();
 		boxingPage = new BoxingPage();  
-		arrivalPage = new NewArrivalsPage(); 
+		arrivalPage = new NewArrivalsPage();
+		footerPage= new FooterPage();
+		
 	}
 	
 }

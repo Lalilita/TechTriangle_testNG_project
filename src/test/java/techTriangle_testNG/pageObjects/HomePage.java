@@ -2,6 +2,7 @@ package techTriangle_testNG.pageObjects;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -351,9 +352,106 @@ public class HomePage extends CommonMethods{
 			System.out.println("Actual total price is: "+(actualTotalPrice));
 			
 			Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
-		}
+		
+		
+	}
 	
+		//Kong
+	     @FindBy(xpath = "//a[normalize-space()='Fitness Accessories']")
+	        public WebElement AccessoriesBtn;
 
+
+	        @FindBy(xpath = "//img[@alt='Currency CAD']")
+	        public WebElement canFlag;
+
+
+	        @FindBy(xpath = "//img[@alt='Currency USD']")
+	        public WebElement USAFlag;
+
+	        @FindBy(xpath = "(//span[@class='discount_price'])[1]")
+	        public WebElement productPrice;
+
+	        //@FindBy(xpath = "//a[@href='https://www.fitnessavenue.ca/zjp/jump-ropes%27]%22"
+	        //public WebElement jumpRope;
+
+	    
+	        
+	        @FindBy(id = "login-username")
+	        public WebElement logInputUser;
+	        
+	        @FindBy(id = "login-password")
+	        public WebElement InputPass;
+	        
+	        @FindBy(id = "login-button")
+	        public WebElement logInButton;
+	        
+	        @FindBy(xpath = "//img[@alt='Shaker Bottles']")
+	        public WebElement BottlesItemLink;
+	        
+	        @FindBy(xpath = "(//select[@class='form-control ng-pristine ng-untouched ng-valid'])[3]")
+	        public WebElement SortDropDown;
+	        
+	      
+	        
+	        //methods
+	        public void verifyCanadaCurrency() throws InterruptedException {
+	    		USAFlag.click();
+	            canFlag.click();
+	            Thread.sleep(3000);
+	            
+	           //$399.99 CAD /EA
+	           Assert.assertTrue(productPrice.isDisplayed() && productPrice.getText().contains("CAD"));
+	           System.out.println("Curreny changed to CAD");
+	       }
+
+	       public void verifyUSACurrency() throws InterruptedException {
+	           USAFlag.click();
+	           Assert.assertTrue(productPrice.isDisplayed() && productPrice.getText().contains("USD"));
+	           System.out.println("Curreny changed to USA");
+	       }
+	       
+	       public void LoginAccount() {
+	    	   loginBtn.click();
+	    	   logInputUser.sendKeys("iemsawat@gmail.com");
+	    	   InputPass.sendKeys("batch10");
+	    	   logInButton.click();
+	       }
+	       
+	       public void VerifyOrderPrice() throws InterruptedException {
+	    	   FitnessAccessiriesTab.click();
+	    	   Thread.sleep(3000);
+	    	   BottlesItemLink.click();
+	    	    List<WebElement>beforeFilterPrice=driver.findElements(By.xpath("//span[@class='discount_price']"));
+	    		
+	    		List<Double>beforeFilterPriceList = new ArrayList<>();
+	    		
+	    		//14.99 CAD EA
+	    		for(WebElement p : beforeFilterPrice) {
+	    			beforeFilterPriceList.add(Double.valueOf((p.getText().replace("$","")).split(" ")[0]));
+
+	    		}
+	    	   
+	    	   
+	           CommonMethods.selectDropDownValue(SortDropDown, "Price (Asc)");
+	           Thread.sleep(3000);
+	           List<WebElement>afterFilterPrice=driver.findElements(By.xpath("//span[@class='discount_price']"));
+	    		
+	    		List<Double>afterFilterPriceList = new ArrayList<>();
+	    		//14.99 CAD EA
+
+	    		for(WebElement p : afterFilterPrice) {
+	    			afterFilterPriceList.add(Double.valueOf((p.getText().replace("$","")).split(" ")[0]));
+	    			
+	    		}
+
+	       	   Collections.sort(beforeFilterPriceList);  // it will sort the values in the list
+	    	   Assert.assertEquals(beforeFilterPriceList, afterFilterPriceList);
+	    	   
+	       }
+	    	
+	    	
+	    	
+		
 	
 }	
 	
