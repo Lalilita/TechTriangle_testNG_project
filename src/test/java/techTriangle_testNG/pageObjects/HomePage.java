@@ -2,6 +2,7 @@ package techTriangle_testNG.pageObjects;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -19,6 +20,7 @@ public class HomePage extends CommonMethods {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 
+	// WebElement ------- Lalita
 	@FindBy(xpath = "//a[text()='Login']")
 	public WebElement loginBtn;
 
@@ -31,7 +33,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//a[@class='ng-binding ng-isolate-scope btn' and text()='Weights']")
 	public WebElement weightsTab;
 
-	// Ratthanon
+	// WebElement ------- Ratthanon
 	@FindBy(xpath = "(//a[text()='View all'])[1]")
 	public WebElement viewAllItem;
 
@@ -77,8 +79,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav ng-scope']/li[4]/ul/li/div/div/div")
 	public List<WebElement> ItemCountFinessTab;
 
-	// Tola
-
+	// WebElement ------- Tola
 	@FindBy(xpath = "//a[@href='/zkett/kettlebells']//span//img")
 	public WebElement kettlebellsTab;
 
@@ -120,19 +121,42 @@ public class HomePage extends CommonMethods {
 
 	@FindBy(xpath = "//div[@class='widget_content']//span[@class='total_amount']")
 	public WebElement totalPrice;
-	
-	
-	//Kangkook
-	@FindBy(xpath="//*[@id=\"header\"]/div[4]/a[2]")
-	public WebElement signUpBtn;
-	
-	@FindBy(xpath="//*[@id=\"header\"]/div[4]/a[1]")
-	public WebElement myAccountBtn;
 
+	// WebElement ------- Kong
+	@FindBy(xpath = "//a[normalize-space()='Fitness Accessories']")
+	public WebElement AccessoriesBtn;
+
+	@FindBy(xpath = "//img[@alt='Currency CAD']")
+	public WebElement canFlag;
+
+	@FindBy(xpath = "//img[@alt='Currency USD']")
+	public WebElement USAFlag;
+
+	@FindBy(xpath = "(//span[@class='discount_price'])[1]")
+	public WebElement productPrice;
+
+	// @FindBy(xpath =
+	// "//a[@href='https://www.fitnessavenue.ca/zjp/jump-ropes%27]%22"
+	// public WebElement jumpRope;
+
+	@FindBy(id = "login-username")
+	public WebElement logInputUser;
+
+	@FindBy(id = "login-password")
+	public WebElement InputPass;
+
+	@FindBy(id = "login-button")
+	public WebElement logInButton;
+
+	@FindBy(xpath = "//img[@alt='Shaker Bottles']")
+	public WebElement BottlesItemLink;
+
+	@FindBy(xpath = "(//select[@class='form-control ng-pristine ng-untouched ng-valid'])[3]")
+	public WebElement SortDropDown;
 
 	// -------------- Methods -------------- //
-	
-	//Lalita
+
+	// Method ------- Lalita
 	// LoginTest
 	public void goToLogin() {
 		loginBtn.click();
@@ -156,7 +180,6 @@ public class HomePage extends CommonMethods {
 		strengthAndConTab.click();
 		Assert.assertEquals(driver.getCurrentUrl(), Constants.strengthAndConUrl);
 		System.out.println("Page is navigated to Strength & Conditioning product pages");
-
 	}
 
 	public void goToStrengthAndConPage() {
@@ -167,7 +190,7 @@ public class HomePage extends CommonMethods {
 		weightsTab.click();
 	}
 
-	// Method Ratthanon
+	// Method ------- Ratthanon
 	public void checkArrowFunction(WebElement arrowType) throws InterruptedException {
 		int count = 0;
 		String ResultText = "";
@@ -257,8 +280,7 @@ public class HomePage extends CommonMethods {
 		return s.replaceAll("[^\\p{Alnum}]", "");
 	}
 
-	// Tola
-
+	// Method ------- Tola
 	// Home page image clickable
 	@FindBy(xpath = "//*[@id='content']/div[3]/div")
 	public List<WebElement> homePageProductImages;
@@ -356,6 +378,73 @@ public class HomePage extends CommonMethods {
 		System.out.println("Actual total price is: " + (actualTotalPrice));
 
 		Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
+
 	}
+
+	// Method ------- Kong
+	public void verifyCanadaCurrency() throws InterruptedException {
+		USAFlag.click();
+		canFlag.click();
+		Thread.sleep(3000);
+
+		// $399.99 CAD /EA
+		Assert.assertTrue(productPrice.isDisplayed() && productPrice.getText().contains("CAD"));
+		System.out.println("Curreny changed to CAD");
+	}
+
+	public void verifyUSACurrency() throws InterruptedException {
+		USAFlag.click();
+		Assert.assertTrue(productPrice.isDisplayed() && productPrice.getText().contains("USD"));
+		System.out.println("Curreny changed to USA");
+	}
+
+	public void LoginAccount() {
+		loginBtn.click();
+		logInputUser.sendKeys("iemsawat@gmail.com");
+		InputPass.sendKeys("batch10");
+		logInButton.click();
+	}
+
+	public void VerifyOrderPrice() throws InterruptedException {
+		FitnessAccessiriesTab.click();
+		Thread.sleep(3000);
+		BottlesItemLink.click();
+		List<WebElement> beforeFilterPrice = driver.findElements(By.xpath("//span[@class='discount_price']"));
+
+		List<Double> beforeFilterPriceList = new ArrayList<>();
+
+		// 14.99 CAD EA
+		for (WebElement p : beforeFilterPrice) {
+			beforeFilterPriceList.add(Double.valueOf((p.getText().replace("$", "")).split(" ")[0]));
+
+		}
+
+		CommonMethods.selectDropDownValue(SortDropDown, "Price (Asc)");
+		Thread.sleep(3000);
+		List<WebElement> afterFilterPrice = driver.findElements(By.xpath("//span[@class='discount_price']"));
+
+		List<Double> afterFilterPriceList = new ArrayList<>();
+		// 14.99 CAD EA
+
+		for (WebElement p : afterFilterPrice) {
+			afterFilterPriceList.add(Double.valueOf((p.getText().replace("$", "")).split(" ")[0]));
+
+		}
+
+		Collections.sort(beforeFilterPriceList); // it will sort the values in the list
+		Assert.assertEquals(beforeFilterPriceList, afterFilterPriceList);
+
+	}
+
+	// WebElement ------- Kangkook
+	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[2]")
+	public WebElement signUpBtn;
+
+	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[1]")
+	public WebElement myAccountBtn;
+	
+	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
+	public WebElement ebikesTap; 
+
 
 }

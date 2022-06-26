@@ -1,0 +1,5 @@
+test-output
+.classpath
+.DS_Store
+.settings
+target/test-classes
