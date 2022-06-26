@@ -33,6 +33,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//a[@class='ng-binding ng-isolate-scope btn' and text()='Weights']")
 	public WebElement weightsTab;
 
+	
 	// WebElement ------- Ratthanon
 	@FindBy(xpath = "(//a[text()='View all'])[1]")
 	public WebElement viewAllItem;
@@ -79,6 +80,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav ng-scope']/li[4]/ul/li/div/div/div")
 	public List<WebElement> ItemCountFinessTab;
 
+	
 	// WebElement ------- Tola
 	@FindBy(xpath = "//a[@href='/zkett/kettlebells']//span//img")
 	public WebElement kettlebellsTab;
@@ -121,6 +123,7 @@ public class HomePage extends CommonMethods {
 
 	@FindBy(xpath = "//div[@class='widget_content']//span[@class='total_amount']")
 	public WebElement totalPrice;
+	
 
 	// WebElement ------- Kong
 	@FindBy(xpath = "//a[normalize-space()='Fitness Accessories']")
@@ -154,6 +157,7 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "(//select[@class='form-control ng-pristine ng-untouched ng-valid'])[3]")
 	public WebElement SortDropDown;
 
+	
 	// WebElement ------- Kangkook
 	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[2]")
 	public WebElement signUpBtn;
@@ -166,6 +170,8 @@ public class HomePage extends CommonMethods {
 	
 	@FindBy(xpath = "//input[@class='search-bar-button']")
 	public WebElement searchButton;
+	
+	
 
 	// -------------- Methods -------------- //
 
@@ -202,6 +208,7 @@ public class HomePage extends CommonMethods {
 		weightsTab.click();
 	}
 
+	
 	// Method ------- Ratthanon
 	public void checkArrowFunction(WebElement arrowType) throws InterruptedException {
 		int count = 0;
@@ -216,15 +223,12 @@ public class HomePage extends CommonMethods {
 				System.out.println("Repeate slide");
 				break;
 			}
-
 		}
 		Assert.assertEquals(count, SlidePicture.size());
-
 	}
 
 	public int slidePictureNumber() {
 		return SlidePicture.size();
-
 	}
 
 	public void validateSlideClickable() throws InterruptedException {
@@ -264,7 +268,6 @@ public class HomePage extends CommonMethods {
 			Assert.assertEquals(removeAllNonAlphaNumeric(ItemCatalog.getText()), removeAllNonAlphaNumeric(WebTab[i]));
 			Thread.sleep(1000);
 			getDriver().navigate().back();
-
 		}
 
 	}
@@ -282,7 +285,6 @@ public class HomePage extends CommonMethods {
 			System.out.println(Itemtext);
 			Assert.assertTrue(nameList.contains(Itemtext));
 		}
-
 	}
 
 	public String removeAllNonAlphaNumeric(String s) {
@@ -292,6 +294,7 @@ public class HomePage extends CommonMethods {
 		return s.replaceAll("[^\\p{Alnum}]", "");
 	}
 
+	
 	// Method ------- Tola
 
 	// Home page image clickable
