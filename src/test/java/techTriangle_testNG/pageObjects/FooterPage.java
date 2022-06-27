@@ -10,6 +10,7 @@ import techTriangle_testNG.utilities.CommonMethods;
 import techTriangle_testNG.utilities.Constants;
 
 public class FooterPage extends CommonMethods {
+	
 	public FooterPage() {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
