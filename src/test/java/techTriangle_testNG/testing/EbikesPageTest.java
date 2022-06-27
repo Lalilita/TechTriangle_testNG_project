@@ -15,29 +15,16 @@ public class EbikesPageTest extends CommonMethods{
 		getDriver();
 	}
 
-	@Test 
-	public void EB_01_VerifyEBikesTab() {
-		ebikePage.verifyEBikesTabIsEnableAndNavigateToEBikesPage();
-	}
-	
-	@Test 
-	public void EB_02_VerifySortByPartNumber() throws InterruptedException {
-		ebikePage.verifySortByPartNumberAsc();
-	}
-	
-	@Test 
-	public void EB_03_VerifySortByDescription() throws InterruptedException {
-		ebikePage.verifySortByShortDescriptionAsc();
-	}
-
-	@Test 
-	public void EB_04_VerifySortByPrice() throws InterruptedException {
-		ebikePage.verifySortByPriceAsc();
-	}
-	
 	@AfterClass
 	public void teardown() {
 		tearDown();
 	}
+	
+	@Test(enabled = true)
+	public void VerifyProductListInsideEbikesPage() {
+		ebikePage.verifyBikeImageCount();
+	}
+	
+	
 
 }
