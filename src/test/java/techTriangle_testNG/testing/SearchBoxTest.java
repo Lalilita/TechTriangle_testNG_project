@@ -2,27 +2,21 @@ package techTriangle_testNG.testing;
 
 
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-
-import techTriangle_testNG.pageObjects.SearchBoxTestingObject;
+import org.testng.annotations.BeforeClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
-public class SearchBoxTestingTest extends CommonMethods{
+public class SearchBoxTest extends CommonMethods{
 
-	SearchBoxTestingObject searchBoxTestingObject = new SearchBoxTestingObject();
-	
-	WebDriver driver;
 	
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		getDriver();
 	}
 
-	@AfterMethod
+	@AfterClass
 	public void teardown() {
 		tearDown();
 	}
@@ -30,27 +24,27 @@ public class SearchBoxTestingTest extends CommonMethods{
 		
 	@Test
 	public void SBT01Test() throws InterruptedException {
-		searchBoxTestingObject.SBT01();
+		searchPage.SBT01();
 	}
 	
 	@Test
 	public void SBT02Test() throws InterruptedException {
-		searchBoxTestingObject.SBT02();
+		searchPage.SBT02();
 	}
 	
 	@Test
 	public void SBT03Test() throws InterruptedException{
-		searchBoxTestingObject.SBT03();
+		searchPage.SBT03();
 	}
 	
 	@Test
 	public void SBT04Test() throws InterruptedException{
-		searchBoxTestingObject.SBT04();
+		searchPage.SBT04();
 	}
 	
 	@Test
 	public void SBT05Test() throws InterruptedException{
-		searchBoxTestingObject.SBT05();
+		searchPage.SBT05();
 	}
 	
 }

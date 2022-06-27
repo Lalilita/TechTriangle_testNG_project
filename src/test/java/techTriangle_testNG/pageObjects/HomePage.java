@@ -171,11 +171,13 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//input[@class='search-bar-button']")
 	public WebElement searchButton;
 	
-	
+	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
+	public WebElement ebikesTap; 
 
 	// -------------- Methods -------------- //
 
 	// Method ------- Lalita
+	// LoginTest
 	public void goToLogin() {
 		loginBtn.click();
 	}
@@ -296,7 +298,6 @@ public class HomePage extends CommonMethods {
 
 	
 	// Method ------- Tola
-
 	// Home page image clickable
 	@FindBy(xpath = "//*[@id='content']/div[3]/div")
 	public List<WebElement> homePageProductImages;
@@ -451,5 +452,8 @@ public class HomePage extends CommonMethods {
 		Assert.assertEquals(beforeFilterPriceList, afterFilterPriceList);
 
 	}
+
+
+
 
 }

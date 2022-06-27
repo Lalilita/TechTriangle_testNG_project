@@ -1,7 +1,7 @@
 package techTriangle_testNG.testing;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 
 import techTriangle_testNG.utilities.CommonMethods;
 

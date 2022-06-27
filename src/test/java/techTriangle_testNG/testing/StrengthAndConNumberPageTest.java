@@ -1,10 +1,10 @@
 package techTriangle_testNG.testing;
 
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.WebDriver;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
@@ -23,13 +23,13 @@ public class StrengthAndConNumberPageTest extends CommonMethods{
 	}
   
 	@Test
-	public void TTG_STR_001_verifyStrengthAndConditioningTab() {
+	public void TTG_STR_001_verifyStrengthAndConditioningTab() throws InterruptedException {
 		homePage.verifyStrengthAndConditioningTab();
 		homePage.verifyStrengthAndConditioningTabNavigateToItsPage();
 	}
 	
 	@Test(dependsOnMethods = "TTG_STR_001_verifyStrengthAndConditioningTab")
-	public void TTG_STR_002_verifyProductGroupInStrengthAndConditioning() { //bodyWeightGroup
+	public void TTG_STR_002_verifyProductGroupInStrengthAndConditioning() throws InterruptedException { //bodyWeightGroup
 		strengthConPage.findSizeOfStrengthAndConProductTypes();
 		strengthConPage.verifyStrengthAndConProductTypesAreClickable();
 	}

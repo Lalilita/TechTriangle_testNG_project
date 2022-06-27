@@ -20,14 +20,21 @@
           <include name="ValidateNumberItem"/>
         </methods>
       </class> <!-- techTriangle_testNG.testing.FitnessAccessoriesTabTest -->
-      <class name="techTriangle_testNG.testing.LoginTest">
+      <class name="techTriangle_testNG.testing.footerTest">
         <methods>
-          <include name="TTG_LOGIN_001_to_006" invocation-numbers="5"/>
-          <include name="teardown"/>
           <include name="setup"/>
-          <include name="TTG_LOGIN_007" invocation-numbers="0"/>
+          <include name="TTG_FOOTER_001_FBVerify"/>
+          <include name="teardown"/>
+          <include name="TTG_FOOTER_002_InstgramVerify"/>
         </methods>
-      </class> <!-- techTriangle_testNG.testing.LoginTest -->
+      </class> <!-- techTriangle_testNG.testing.footerTest -->
+      <class name="techTriangle_testNG.testing.EbikesPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="EB_04_VerifySortByPrice"/>
+        </methods>
+      </class> <!-- techTriangle_testNG.testing.EbikesPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

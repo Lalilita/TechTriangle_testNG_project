@@ -1,9 +1,9 @@
 package techTriangle_testNG.testing;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 import techTriangle_testNG.pageObjects.HomePageSignUpObject;
 import techTriangle_testNG.utilities.CommonMethods;
 

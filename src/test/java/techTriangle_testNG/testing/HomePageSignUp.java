@@ -1,22 +1,16 @@
 package techTriangle_testNG.testing;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HomePageSignUp {
@@ -73,7 +67,7 @@ public class HomePageSignUp {
         int randomNum = rd.nextInt(10000);
         return randomNum + "abc@mail.com";
     }
-	@Ignore
+	
 	@Test
 	public void _0101SignUp() {
 		
@@ -119,7 +113,7 @@ public class HomePageSignUp {
 		driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[6]/button")).click();
 		//*[@id="NewCustomer"]/div[6]/button
 		
-				Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"header\"]/div[4]/a[1]")).isDisplayed());
+				AssertJUnit.assertTrue(driver.findElement(By.xpath("//*[@id=\"header\"]/div[4]/a[1]")).isDisplayed());
 				//*[@id="header"]/div[4]/a[1]
 	}
 	
@@ -129,7 +123,6 @@ public class HomePageSignUp {
 	// there is no invalid password - whatever I put it, it was accepted 
 	// password "1" accepted, id "fitnessavenueTCT@gmail.com"
 	// also "*" accepted
-	@Ignore
 	@Test
 	public void _0201invalidPassword() {
 		
@@ -175,7 +168,7 @@ public class HomePageSignUp {
 		driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[6]/button")).click();
 		//*[@id="NewCustomer"]/div[6]/button
 		
-				Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"header\"]/div[4]/a[1]")).isDisplayed());
+				AssertJUnit.assertTrue(driver.findElement(By.xpath("//*[@id=\"header\"]/div[4]/a[1]")).isDisplayed());
 				//*[@id="header"]/div[4]/a[1]
 	}
 	
@@ -193,7 +186,7 @@ public class HomePageSignUp {
 		
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).click();
 		
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
 		//*[@id="NewCustomer"]/div[1]/div/table/tbody/tr[2]/td[2]/label
 	}
 	
@@ -212,7 +205,7 @@ public class HomePageSignUp {
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).click();
 
 		
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
 		//*[@id="NewCustomer"]/div[1]/div/table/tbody/tr[2]/td[2]/label
 	}
 	
@@ -232,7 +225,7 @@ public class HomePageSignUp {
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).click();
 
 		
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
 		//*[@id="NewCustomer"]/div[1]/div/table/tbody/tr[2]/td[2]/label
 	}
 	
@@ -251,7 +244,7 @@ public class HomePageSignUp {
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).click();
 
 		
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElement(By.xpath("//*[@id=\"NewCustomer\"]/div[1]/div/table/tbody/tr[2]/td[2]/label")).isDisplayed());
 		//*[@id="NewCustomer"]/div[1]/div/table/tbody/tr[2]/td[2]/label
 	}
 	

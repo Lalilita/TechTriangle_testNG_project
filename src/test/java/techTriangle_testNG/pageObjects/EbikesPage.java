@@ -1,5 +1,6 @@
 package techTriangle_testNG.pageObjects;
 
+import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,45 +17,76 @@ public class EbikesPage extends CommonMethods{
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 
-	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
-	public WebElement ebikesTap;
+	@FindBy (xpath = "//*[@class='browse_header']")
+	public WebElement ebikesHeader; 
 	
-	@FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[8]/div[2]/div[2]/div[2]")
-	public WebElement hover;
+	@FindBy (xpath = "//select[@ng-model='searchCtrl.params.sortBy']")
+	public WebElement sortByDropdown; //index 1 = part number(Asc), 2= short description (Asc), 3= Price (Asc)
 	
-	@FindBy(xpath = "//div[@class='view-larger-image']//a[@title='Magnum Classic II – Low Step Folding Electric Bike - Black']")
-	public WebElement EnlargeBikeImage;
+	@FindBy (xpath = "//a[contains (@data-bind, 'html: product.title')]")
+	public List <WebElement> eBikeItems; 
 	
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/div[1]/a[2]")
-	public WebElement forwardArrow;
+	@FindBy (xpath = "//div[@class='widget product_part_num content']")
+	public WebElement partNumber; 
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div/div[1]/span[1]")
-	public WebElement bikeName;
+	@FindBy (xpath = "//a[@target='_self'][2]")
+	public WebElement eBikesLinkBack; 
 	
-	@FindBy (xpath = "/html/body/div[3]/div[2]/div/div[2]/a")
-	public WebElement closeTab;
+	@FindBy (xpath = "//div[@class='widget product_preview search']")
+	public List <WebElement> itemList; 
 	
-	public void verifyBikeImageCount() {
-		click(ebikesTap);
-		Assert.assertTrue(ebikesTap.isEnabled());
-		jsClick(EnlargeBikeImage);
-		wait(Constants.standardwait_time);
-		String expectedBikeName = bikeName.getText();
-		System.out.println(expectedBikeName);
-		Assert.assertTrue(expectedBikeName.contains("Bike"));
-		int bikeProductCount = 1;
-		for (int i = 1; i<Constants.numberofBike; i++) {
-			wait(Constants.standardwait_time);
-			forwardArrow.click();
-			bikeProductCount++;
-			expectedBikeName = bikeName.getText();
-			System.out.println(expectedBikeName);
+	@FindBy (xpath = "//span[@class='regular_price']")
+	public List <WebElement> itemsPrice; 
+	
+	
+	public void verifyEBikesTabIsEnableAndNavigateToEBikesPage() {
+		Assert.assertTrue(homePage.ebikesTap.isDisplayed());
+		Assert.assertTrue(homePage.ebikesTap.isEnabled());
+		homePage.ebikesTap.click();
+		Assert.assertEquals(Constants.eBikesPageUrl, driver.getCurrentUrl()); //compare expectedURL with Actual navigated URL 
+		Assert.assertTrue(ebikesHeader.isDisplayed()); //check if eBikes header is displayed on page
+	}	
+		
+	public void verifySortByPartNumberAsc() throws InterruptedException {
+		
+		String[] eBikesArray = new String[eBikeItems.size()]; //create new string to keep each item's part number
+		selectDropDownValue(sortByDropdown, "string:part_number_asc"); //select drop down "sort by part number"
+		for(int i = 0; i < eBikeItems.size(); i++ ) {   //loop for keep  each item's part number into array
+			eBikeItems.get(i).click();
+			eBikesArray[i] = partNumber.getText(); 
+			eBikesLinkBack.click();
 		}
-		System.out.println("number of product listing on the page are: "+bikeProductCount);
-		Assert.assertTrue(bikeProductCount == Constants.numberofBike);
-		Assert.assertTrue(expectedBikeName.contains("Bike"));
-		click(closeTab);
+		//compare actual kept array with sorted array from Constants class
+		Assert.assertEquals(eBikesArray, Constants.expectArraySortByPartNumberAsc); 
 	}
+	
+	public void verifySortByShortDescriptionAsc() throws InterruptedException {
+		
+		String[] eBikesArray = new String[eBikeItems.size()];  //create new string to keep each item's Description
+		selectDropDownValue(sortByDropdown, "string:short_description_asc");
+		for(int i = 0; i < eBikeItems.size(); i++ ) {   //loop for keep  each item's Description into array
+			eBikesArray[i] = eBikeItems.get(i).getText();
+		}
+		//compare actual kept array with sorted array from Constants class
+		Assert.assertEquals(eBikesArray, Constants.expectArraySortByShortDescriptionAsc); 
+	}
+	
+	public void verifySortByPriceAsc() throws InterruptedException {
+		String[] eBikesArray = new String[eBikeItems.size()];
+		selectDropDownValue(sortByDropdown, "Price (Asc)");
+		ScrolByPixel(600);
+		for(int i = 0; i < eBikeItems.size(); i++ ) {
+			 eBikesArray[i] = itemsPrice.get(i).getText();
+		}
+//		System.out.println(Arrays.toString(eBikesArray));
+//		Arrays.sort(eBikesArray);
+//		System.out.println(Arrays.toString(eBikesArray));
+		Assert.assertEquals(eBikesArray, Constants.expectArraySortByPartPriceAsc);
+	}
+	
+	
+		
+		
 
 }	
 	
