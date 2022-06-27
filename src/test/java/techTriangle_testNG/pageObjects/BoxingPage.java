@@ -1,6 +1,5 @@
 package techTriangle_testNG.pageObjects;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -19,7 +18,6 @@ public class BoxingPage extends CommonMethods {
 	}
 
 
-	// -----------
 	@FindBy(xpath = "//*[@class='browse_header']")
 	public WebElement boxingHeader;
 
@@ -63,7 +61,6 @@ public class BoxingPage extends CommonMethods {
 			boxingArray[i] = partNumber.getText();
 			backToBoxingPageLink.click();
 		}
-		System.out.println(Arrays.toString(boxingArray));
 		// compare actual kept array with sorted array from Constants class
 		Assert.assertEquals(boxingArray, Constants.expectArraySortByPartNumberAsc);
 	}
@@ -76,7 +73,6 @@ public class BoxingPage extends CommonMethods {
 		for (int i = 0; i < boxingItems.size(); i++) { // loop for keep each item's Description into array
 			boxingArray[i] = boxingItems.get(i).getText();
 		}
-		System.out.println(Arrays.toString(boxingArray));
 		// compare actual kept array with sorted array from Constants class
 		Assert.assertEquals(boxingArray, Constants.expectArraySortByShortDescriptionAsc);
 	}
@@ -90,7 +86,6 @@ public class BoxingPage extends CommonMethods {
 		for (int i = 0; i < itemPrice.size(); i++) {
 			boxingArray[i] = itemPrice.get(i).getText();
 		}
-		System.out.println(Arrays.toString(boxingArray));
 //			System.out.println(Arrays.toString(eBikesArray));
 //			Arrays.sort(eBikesArray);
 //			System.out.println(Arrays.toString(eBikesArray));

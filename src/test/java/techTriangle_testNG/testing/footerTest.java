@@ -1,40 +1,38 @@
 package techTriangle_testNG.testing;
 
 
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
-public class footerTest extends CommonMethods{
+public class FooterTest extends CommonMethods{
 
-	WebDriver driver;
-
-	@BeforeClass
+	@BeforeMethod
 	public void setup() {
 		getDriver();
 	}
 
-	@AfterClass
+	@AfterMethod
 	public void teardown() {
 		tearDown();
 	}
   
 	@Test
-	public void TTG_FOOTER_001_FBVerify() {
+	public void TTG_FOOTER_001_contactUs() throws InterruptedException {
+		footerPage.verifyContactUs();
+	}
+	@Test
+	public void TTG_FOOTER_002_FBVerify() throws InterruptedException {
 		footerPage.verifyFB();
 	}
 	@Test
-	public void TTG_FOOTER_002_InstgramVerify() {
+	public void TTG_FOOTER_003_InstgramVerify() throws InterruptedException {
 		footerPage.verifyInstgrm();
 	}
 	
-	@Test
-	public void TTG_FOOTER_003_contactUs() {
-		footerPage.verifyContactUs();
-	}
+
 	
 	
 	

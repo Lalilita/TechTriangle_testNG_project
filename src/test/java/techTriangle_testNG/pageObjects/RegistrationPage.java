@@ -110,7 +110,7 @@ public class RegistrationPage extends CommonMethods{
 		selectDropDownValue(stateDropdown,"CA");
 		zipcode.sendKeys("1");
 		phone.sendKeys("1");
-		registerButton.click();
+		registerButton.click();   
 		Assert.assertTrue(homePage.myAccountBtn.isDisplayed());
 	}
 	

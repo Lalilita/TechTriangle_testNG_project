@@ -10,7 +10,7 @@ import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
-public class weightsProductTest extends CommonMethods{
+public class WeightsProductTest extends CommonMethods{
 
 	@BeforeClass
 	public void setup() {

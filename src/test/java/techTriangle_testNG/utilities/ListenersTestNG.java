@@ -11,31 +11,32 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
 
-public class ListenersTestNG implements ITestListener, IReporter{
+public class ListenersTestNG extends CommonMethods implements ITestListener, IReporter{
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("============> New Test Strarted "+result.getName());
+		System.out.println("============> New Test Strarted:  "+result.getName());
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("============> onTestSuccess Method "+result.getName());
+		System.out.println("============> onTestSuccess Method:  "+result.getName());
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		System.out.println("============> onTestFailure Method "+result.getName());
+		System.out.println("xxxxxxxxxxxxx onTestFailure Method:  "+result.getName());
+		takeScreenshot("screenshot_testFailure: "+result.getName());
 	}
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("============> onStart ");
+		System.out.println("============> onStart! ");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		System.out.println("============> onFinish ");
+		System.out.println("============> onFinish!! ");
 	}
 
 	@Override

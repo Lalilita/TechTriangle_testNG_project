@@ -24,9 +24,6 @@ public class HomePage extends CommonMethods {
 	@FindBy(xpath = "//a[text()='Login']")
 	public WebElement loginBtn;
 
-	@FindBy(xpath = "//a[text()='Logout']")
-	public WebElement logoutBtn;
-
 	@FindBy(xpath = "//a[text()='Strength & Conditioning']")
 	public WebElement strengthAndConTab;
 
@@ -180,13 +177,6 @@ public class HomePage extends CommonMethods {
 	// LoginTest
 	public void goToLogin() {
 		loginBtn.click();
-	}
-
-	// LoginTest
-	public void verifyLoginSuccess() {
-		Assert.assertTrue(logoutBtn.isDisplayed());
-		Assert.assertTrue(logoutBtn.isEnabled());
-		System.out.println("Successfully Login! Logout button is display and enable");
 	}
 
 	public void verifyStrengthAndConditioningTab() {

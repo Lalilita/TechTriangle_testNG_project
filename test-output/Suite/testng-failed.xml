@@ -6,35 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="techTriangle_testNG.testing.StrengthEquipmentTabTest">
-        <methods>
-          <include name="TearDown"/>
-          <include name="ValidateNumberItem"/>
-          <include name="SetUp"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.StrengthEquipmentTabTest -->
-      <class name="techTriangle_testNG.testing.FitnessAccessoriesTabTest">
-        <methods>
-          <include name="SetUp"/>
-          <include name="TearDown"/>
-          <include name="ValidateNumberItem"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.FitnessAccessoriesTabTest -->
-      <class name="techTriangle_testNG.testing.footerTest">
+      <class name="techTriangle_testNG.testing.BoxingMMATest">
         <methods>
           <include name="setup"/>
-          <include name="TTG_FOOTER_001_FBVerify"/>
+          <include name="AR_02_VerifySortByPartNumber"/>
           <include name="teardown"/>
-          <include name="TTG_FOOTER_002_InstgramVerify"/>
         </methods>
-      </class> <!-- techTriangle_testNG.testing.footerTest -->
-      <class name="techTriangle_testNG.testing.EbikesPageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="EB_04_VerifySortByPrice"/>
-        </methods>
-      </class> <!-- techTriangle_testNG.testing.EbikesPageTest -->
+      </class> <!-- techTriangle_testNG.testing.BoxingMMATest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

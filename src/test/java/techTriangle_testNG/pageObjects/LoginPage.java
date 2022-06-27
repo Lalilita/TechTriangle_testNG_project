@@ -24,27 +24,36 @@ public class LoginPage extends CommonMethods{
 	@FindBy(xpath = "//input[@id='login-button']")
 	public WebElement loginBtn;
 	
+	@FindBy(xpath = "//a[text()='Logout']")
+	public WebElement logoutBtn;
+
 	@FindBy(xpath = "//span[@class='error']")
 	public WebElement errorText;
 
 	
 	
 	// -------------- Methods -------------- //
-	// LoginTest
 	public void loginToHomepage(String username, String password) {
 		sendText(emailInput, username);
 		sendText(passwordInput, password);
 		loginBtn.click();
 	}
-	// LoginTest
+	
 	public String getErrorText() {
 		String text = errorText.getText();
 		return text;
 	}
-	// LoginTest
+	
 	public void verifyLoginFailed() {
 		Assert.assertTrue(errorText.isDisplayed());
 		System.out.println(getErrorText());
+	}
+	
+	public void verifyLoginSuccess() throws InterruptedException {
+		Thread.sleep(2000);
+		Assert.assertTrue(logoutBtn.isDisplayed());
+		Assert.assertTrue(logoutBtn.isEnabled());
+		System.out.println("Successfully Login! Logout button is display and enable");
 	}
 	
 

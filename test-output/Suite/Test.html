@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>47/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>16/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jun 26 20:06:26 EDT 2022</td>
+<td>Started on:</td><td>Mon Jun 27 14:19:43 EDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>551 seconds (551903 ms)</td>
+<tr><td>Total time:</td><td>175 seconds (175793 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,86 +75,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='techTriangle_testNG.testing.StrengthEquipmentTabTest.ValidateNumberItem()'><b>ValidateNumberItem</b><br>Test class: techTriangle_testNG.testing.StrengthEquipmentTabTest</td>
-<td><div><pre>java.lang.AssertionError: expected:&lt;9&gt; but was:&lt;10&gt;
-	at techTriangle_testNG.testing.StrengthEquipmentTabTest.ValidateNumberItem(StrengthEquipmentTabTest.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace869464531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace869464531'><pre>java.lang.AssertionError: expected:&lt;9&gt; but was:&lt;10&gt;
-	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
-	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:328)
-	at techTriangle_testNG.testing.StrengthEquipmentTabTest.ValidateNumberItem(StrengthEquipmentTabTest.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:808)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.runSuites(TestNG.java:1092)
-	at org.testng.TestNG.run(TestNG.java:1060)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>4</td>
-<td>techTriangle_testNG.testing.StrengthEquipmentTabTest@272113c4</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.footerTest.TTG_FOOTER_001_FBVerify()'><b>TTG_FOOTER_001_FBVerify</b><br>Test class: techTriangle_testNG.testing.footerTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@aria-label=&apos;Facebook&apos;]//*[name()=&apos;svg&apos;]//*[name()=&apos;path&apos; and contains(@class,&apos;p361ku9c&apos;)]&quot;}
+<td title='techTriangle_testNG.testing.BoxingMMATest.AR_02_VerifySortByPartNumber()'><b>AR_02_VerifySortByPartNumber</b><br>Test class: techTriangle_testNG.testing.BoxingMMATest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: target frame detached
   (Session info: chrome=102.0.5005.115)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Lalis-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:25:cf09:bd47:d00a%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;11.0.14&apos;
+System info: host: &apos;Lalis-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:5e:1d2c:8c85:cd02%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;11.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/_q/7v4d026x789...}, goog:chromeOptions: {debuggerAddress: localhost:63651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
-*** Element info: {Using=xpath, value=//a[@aria-label=&apos;Facebook&apos;]//*[name()=&apos;svg&apos;]//*[name()=&apos;path&apos; and contains(@class,&apos;p361ku9c&apos;)]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/_q/7v4d026x789...}, goog:chromeOptions: {debuggerAddress: localhost:58670}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53c45e6e9843ff7739ba40084a335200
+*** Element info: {Using=xpath, value=//a[contains (@data-bind, &apos;html: product.title&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-	at techTriangle_testNG.pageObjects.FooterPage.verifyFB(FooterPage.java:40)
-	at techTriangle_testNG.testing.footerTest.TTG_FOOTER_001_FBVerify(footerTest.java:31)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy12.size(Unknown Source)
+	at techTriangle_testNG.pageObjects.BoxingPage.verifySortByPartNumberAsc(BoxingPage.java:58)
+	at techTriangle_testNG.testing.BoxingMMATest.AR_02_VerifySortByPartNumber(BoxingMMATest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1444776174", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1444776174'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@aria-label=&apos;Facebook&apos;]//*[name()=&apos;svg&apos;]//*[name()=&apos;path&apos; and contains(@class,&apos;p361ku9c&apos;)]&quot;}
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1782561969", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1782561969'><pre>org.openqa.selenium.WebDriverException: target frame detached
   (Session info: chrome=102.0.5005.115)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Lalis-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:25:cf09:bd47:d00a%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;11.0.14&apos;
+System info: host: &apos;Lalis-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:5e:1d2c:8c85:cd02%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;11.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/_q/7v4d026x789...}, goog:chromeOptions: {debuggerAddress: localhost:63651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
-*** Element info: {Using=xpath, value=//a[@aria-label=&apos;Facebook&apos;]//*[name()=&apos;svg&apos;]//*[name()=&apos;path&apos; and contains(@class,&apos;p361ku9c&apos;)]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/_q/7v4d026x789...}, goog:chromeOptions: {debuggerAddress: localhost:58670}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 53c45e6e9843ff7739ba40084a335200
+*** Element info: {Using=xpath, value=//a[contains (@data-bind, &apos;html: product.title&apos;)]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -165,15 +119,15 @@ Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-	at techTriangle_testNG.pageObjects.FooterPage.verifyFB(FooterPage.java:40)
-	at techTriangle_testNG.testing.footerTest.TTG_FOOTER_001_FBVerify(footerTest.java:31)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy12.size(Unknown Source)
+	at techTriangle_testNG.pageObjects.BoxingPage.verifySortByPartNumberAsc(BoxingPage.java:58)
+	at techTriangle_testNG.testing.BoxingMMATest.AR_02_VerifySortByPartNumber(BoxingMMATest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -203,197 +157,8 @@ Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>5</td>
-<td>techTriangle_testNG.testing.footerTest@72e5a8e</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.footerTest.TTG_FOOTER_002_InstgramVerify()'><b>TTG_FOOTER_002_InstgramVerify</b><br>Test class: techTriangle_testNG.testing.footerTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;Instagram&apos;]&quot;}
-  (Session info: chrome=102.0.5005.115)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Lalis-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:25:cf09:bd47:d00a%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;11.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/_q/7v4d026x789...}, goog:chromeOptions: {debuggerAddress: localhost:63651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
-*** Element info: {Using=xpath, value=//img[@alt=&apos;Instagram&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-	at techTriangle_testNG.pageObjects.FooterPage.verifyInstgrm(FooterPage.java:45)
-	at techTriangle_testNG.testing.footerTest.TTG_FOOTER_002_InstgramVerify(footerTest.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627419088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace627419088'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;Instagram&apos;]&quot;}
-  (Session info: chrome=102.0.5005.115)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Lalis-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:25:cf09:bd47:d00a%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;11.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/_q/7v4d026x789...}, goog:chromeOptions: {debuggerAddress: localhost:63651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
-*** Element info: {Using=xpath, value=//img[@alt=&apos;Instagram&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-	at techTriangle_testNG.pageObjects.FooterPage.verifyInstgrm(FooterPage.java:45)
-	at techTriangle_testNG.testing.footerTest.TTG_FOOTER_002_InstgramVerify(footerTest.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:808)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.runSuites(TestNG.java:1092)
-	at org.testng.TestNG.run(TestNG.java:1060)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>5</td>
-<td>techTriangle_testNG.testing.footerTest@72e5a8e</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.EbikesPageTest.EB_04_VerifySortByPrice()'><b>EB_04_VerifySortByPrice</b><br>Test class: techTriangle_testNG.testing.EbikesPageTest</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:459)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at com.sun.proxy.$Proxy14.get(Unknown Source)
-	at techTriangle_testNG.pageObjects.EbikesPage.verifySortByPriceAsc(EbikesPage.java:79)
-	at techTriangle_testNG.testing.EbikesPageTest.EB_04_VerifySortByPrice(EbikesPageTest.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1329489396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1329489396'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:459)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at com.sun.proxy.$Proxy14.get(Unknown Source)
-	at techTriangle_testNG.pageObjects.EbikesPage.verifySortByPriceAsc(EbikesPage.java:79)
-	at techTriangle_testNG.testing.EbikesPageTest.EB_04_VerifySortByPrice(EbikesPageTest.java:38)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:808)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.runSuites(TestNG.java:1092)
-	at org.testng.TestNG.run(TestNG.java:1060)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>5</td>
-<td>techTriangle_testNG.testing.EbikesPageTest@783a467b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.FitnessAccessoriesTabTest.ValidateNumberItem()'><b>ValidateNumberItem</b><br>Test class: techTriangle_testNG.testing.FitnessAccessoriesTabTest</td>
-<td><div><pre>java.lang.AssertionError: expected:&lt;11&gt; but was:&lt;12&gt;
-	at techTriangle_testNG.testing.FitnessAccessoriesTabTest.ValidateNumberItem(FitnessAccessoriesTabTest.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace870563118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace870563118'><pre>java.lang.AssertionError: expected:&lt;11&gt; but was:&lt;12&gt;
-	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
-	at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:328)
-	at techTriangle_testNG.testing.FitnessAccessoriesTabTest.ValidateNumberItem(FitnessAccessoriesTabTest.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:808)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.runSuites(TestNG.java:1092)
-	at org.testng.TestNG.run(TestNG.java:1060)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>5</td>
-<td>techTriangle_testNG.testing.FitnessAccessoriesTabTest@7d4f9aae</td></tr>
+<td>24</td>
+<td>techTriangle_testNG.testing.BoxingMMATest@37d4349f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -403,240 +168,85 @@ Session ID: 67cb02b8fe16a3e0c9baa7b4b21911d6
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='techTriangle_testNG.testing.footerTest.TTG_FOOTER_003_contactUs()'><b>TTG_FOOTER_003_contactUs</b><br>Test class: techTriangle_testNG.testing.footerTest</td>
-<td></td>
-<td>3</td>
-<td>techTriangle_testNG.testing.footerTest@72e5a8e</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SearchBoxTest.SBT03Test()'><b>SBT03Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
+<td title='techTriangle_testNG.testing.SignUpTest.TC102_validEmailValidPasswordInvalidBillingInfo()'><b>TC102_validEmailValidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
 <td>7</td>
-<td>techTriangle_testNG.testing.SearchBoxTest@53aac487</td></tr>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_007_verifyLoginSuccess()'><b>TTG_LOGIN_007_verifyLoginSuccess</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: cheatola1768@gmail.com, Abc1234567$</td>
+<td title='techTriangle_testNG.testing.SignUpTest.TC302_invalidEmailValidPasswordInvalidBillingInfo()'><b>TC302_invalidEmailValidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_001_to_006_verifyLoginFailed()'><b>TTG_LOGIN_001_to_006_verifyLoginFailed</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: cheatola1768gmail.com, Abc1234567$</td>
-<td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SignUpTest.TC402_invalidEmailInvalidPasswordInvalidBillingInfo()'><b>TC402_invalidEmailInvalidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
-<td></td>
-<td>9</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.EbikesPageTest.EB_03_VerifySortByDescription()'><b>EB_03_VerifySortByDescription</b><br>Test class: techTriangle_testNG.testing.EbikesPageTest</td>
-<td></td>
-<td>0</td>
-<td>techTriangle_testNG.testing.EbikesPageTest@783a467b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.FilterThePriceTest.VerifyFilterPrice()'><b>VerifyFilterPrice</b><br>Test class: techTriangle_testNG.testing.FilterThePriceTest</td>
-<td></td>
-<td>13</td>
-<td>techTriangle_testNG.testing.FilterThePriceTest@7db12bb6</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_001_to_006_verifyLoginFailed()'><b>TTG_LOGIN_001_to_006_verifyLoginFailed</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: cheatola1768gmail.com, abc1234567$</td>
-<td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
+<td>5</td>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
 <td title='techTriangle_testNG.testing.SignUpTest.TC201_validEmailInvalidPasswordValidBillingInfo()'><b>TC201_validEmailInvalidPasswordValidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
 <td>9</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.EbikesPageTest.EB_02_VerifySortByPartNumber()'><b>EB_02_VerifySortByPartNumber</b><br>Test class: techTriangle_testNG.testing.EbikesPageTest</td>
-<td></td>
-<td>38</td>
-<td>techTriangle_testNG.testing.EbikesPageTest@783a467b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SignUpTest.TC401_invalidEmailInvalidPasswordValidBillingInfo()'><b>TC401_invalidEmailInvalidPasswordValidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
-<td></td>
-<td>10</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.CurrencyTest.TTG_CHANGE_CURRENTCY_01_verifyCanadaCurrency()'><b>TTG_CHANGE_CURRENTCY_01_verifyCanadaCurrency</b><br>Test class: techTriangle_testNG.testing.CurrencyTest</td>
-<td></td>
-<td>11</td>
-<td>techTriangle_testNG.testing.CurrencyTest@273e7444</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.HomePageSlideTest.verifyArrowRightFunction()'><b>verifyArrowRightFunction</b><br>Test class: techTriangle_testNG.testing.HomePageSlideTest</td>
-<td></td>
-<td>7</td>
-<td>techTriangle_testNG.testing.HomePageSlideTest@73e9cf30</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.ShippingEstimateTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: techTriangle_testNG.testing.ShippingEstimateTest<br>Parameters: 20166, Sterling, United States, Washington, true, FedEx shipping : Destination Postal-State Mismatch.</td>
-<td></td>
-<td>4</td>
-<td>techTriangle_testNG.testing.ShippingEstimateTest@52b1beb6</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SearchBoxTest.SBT02Test()'><b>SBT02Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
-<td></td>
-<td>7</td>
-<td>techTriangle_testNG.testing.SearchBoxTest@53aac487</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SearchBoxTest.SBT05Test()'><b>SBT05Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
-<td></td>
-<td>11</td>
-<td>techTriangle_testNG.testing.SearchBoxTest@53aac487</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.HomePageSlideTest.verifyArrowLeftFunction()'><b>verifyArrowLeftFunction</b><br>Test class: techTriangle_testNG.testing.HomePageSlideTest</td>
-<td></td>
-<td>5</td>
-<td>techTriangle_testNG.testing.HomePageSlideTest@73e9cf30</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.weightsProductTest.TTG_WPP_002_verifyAddOutOfStockProduct()'><b>TTG_WPP_002_verifyAddOutOfStockProduct</b><br>Test class: techTriangle_testNG.testing.weightsProductTest</td>
-<td></td>
-<td>7</td>
-<td>techTriangle_testNG.testing.weightsProductTest@13fd2ccd</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.ShippingEstimateTest.VerifyCartShipmentWithValidInfo()'><b>VerifyCartShipmentWithValidInfo</b><br>Test class: techTriangle_testNG.testing.ShippingEstimateTest</td>
-<td></td>
-<td>2</td>
-<td>techTriangle_testNG.testing.ShippingEstimateTest@52b1beb6</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.weightsProductTest.TTG_WPP_001_verifyWeightsTab()'><b>TTG_WPP_001_verifyWeightsTab</b><br>Test class: techTriangle_testNG.testing.weightsProductTest</td>
-<td></td>
-<td>4</td>
-<td>techTriangle_testNG.testing.weightsProductTest@13fd2ccd</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.ShippingEstimateTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: techTriangle_testNG.testing.ShippingEstimateTest<br>Parameters: , , United States, Virginia, false, </td>
-<td></td>
-<td>2</td>
-<td>techTriangle_testNG.testing.ShippingEstimateTest@52b1beb6</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SearchBoxTest.SBT01Test()'><b>SBT01Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
+<td title='techTriangle_testNG.testing.SignUpTest.TC402_invalidEmailInvalidPasswordInvalidBillingInfo()'><b>TC402_invalidEmailInvalidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
 <td>9</td>
-<td>techTriangle_testNG.testing.SearchBoxTest@53aac487</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.ShippingEstimateTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: techTriangle_testNG.testing.ShippingEstimateTest<br>Parameters: , , , , false, </td>
-<td></td>
-<td>2</td>
-<td>techTriangle_testNG.testing.ShippingEstimateTest@52b1beb6</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.StrengthEquipmentTabTest.ValidateListItem()'><b>ValidateListItem</b><br>Test class: techTriangle_testNG.testing.StrengthEquipmentTabTest</td>
-<td></td>
-<td>0</td>
-<td>techTriangle_testNG.testing.StrengthEquipmentTabTest@272113c4</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.weightsProductTest.TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn()'><b>TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn</b><br>Test class: techTriangle_testNG.testing.weightsProductTest</td>
-<td></td>
-<td>3</td>
-<td>techTriangle_testNG.testing.weightsProductTest@13fd2ccd</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.EbikesPageTest.EB_01_VerifyEBikesTab()'><b>EB_01_VerifyEBikesTab</b><br>Test class: techTriangle_testNG.testing.EbikesPageTest</td>
-<td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.EbikesPageTest@783a467b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.CurrencyTest.TTG_CHANGE_CURRENTCY_02_verifyUSACurrency()'><b>TTG_CHANGE_CURRENTCY_02_verifyUSACurrency</b><br>Test class: techTriangle_testNG.testing.CurrencyTest</td>
-<td></td>
-<td>6</td>
-<td>techTriangle_testNG.testing.CurrencyTest@273e7444</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.ShippingEstimateTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: techTriangle_testNG.testing.ShippingEstimateTest<br>Parameters: , Sterling, United States, Virginia, false, </td>
-<td></td>
-<td>2</td>
-<td>techTriangle_testNG.testing.ShippingEstimateTest@52b1beb6</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.weightsProductTest.TTG_WPP_003_verifyAddAvalibleProduct()'><b>TTG_WPP_003_verifyAddAvalibleProduct</b><br>Test class: techTriangle_testNG.testing.weightsProductTest</td>
-<td></td>
-<td>3</td>
-<td>techTriangle_testNG.testing.weightsProductTest@13fd2ccd</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.HomePageAddItemTest.homePage_AddItemToCart()'><b>homePage_AddItemToCart</b><br>Test class: techTriangle_testNG.testing.HomePageAddItemTest</td>
-<td></td>
-<td>17</td>
-<td>techTriangle_testNG.testing.HomePageAddItemTest@506ae4d4</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_001_to_006_verifyLoginFailed()'><b>TTG_LOGIN_001_to_006_verifyLoginFailed</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: cheatola1768@gmail.com, abc1234567$</td>
-<td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SignUpTest.TC302_invalidEmailValidPasswordInvalidBillingInfo()'><b>TC302_invalidEmailValidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
-<td></td>
-<td>6</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.HomePageSlideTest.verifySlideClickable()'><b>verifySlideClickable</b><br>Test class: techTriangle_testNG.testing.HomePageSlideTest</td>
-<td></td>
-<td>27</td>
-<td>techTriangle_testNG.testing.HomePageSlideTest@73e9cf30</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_001_to_006_verifyLoginFailed()'><b>TTG_LOGIN_001_to_006_verifyLoginFailed</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: , Abc1234567$</td>
-<td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SignUpTest.TC202_validEmailInvalidPasswordInvalidBillingInfo()'><b>TC202_validEmailInvalidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
-<td></td>
-<td>9</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_001_to_006_verifyLoginFailed()'><b>TTG_LOGIN_001_to_006_verifyLoginFailed</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: cheatola1768@gmail.com, </td>
-<td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
-<tr>
-<td title='techTriangle_testNG.testing.SignUpTest.TC102_validEmailValidPasswordInvalidBillingInfo()'><b>TC102_validEmailValidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
-<td></td>
-<td>7</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
 <td title='techTriangle_testNG.testing.SignUpTest.TC301_invalidEmailValidPasswordValidBillingInfo()'><b>TC301_invalidEmailValidPasswordValidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
 <td>6</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.ShippingEstimateTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: techTriangle_testNG.testing.ShippingEstimateTest<br>Parameters: 20888, Sterling, United States, Virginia, true, FedEx shipping : Destination postal code missing or invalid.</td>
+<td title='techTriangle_testNG.testing.BoxingMMATest.AR_01_VerifyEBikesTab()'><b>AR_01_VerifyEBikesTab</b><br>Test class: techTriangle_testNG.testing.BoxingMMATest</td>
 <td></td>
 <td>4</td>
-<td>techTriangle_testNG.testing.ShippingEstimateTest@52b1beb6</td></tr>
+<td>techTriangle_testNG.testing.BoxingMMATest@37d4349f</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.FitnessAccessoriesTabTest.ValidateListItem()'><b>ValidateListItem</b><br>Test class: techTriangle_testNG.testing.FitnessAccessoriesTabTest</td>
+<td title='techTriangle_testNG.testing.SearchBoxTest.SBT05Test()'><b>SBT05Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
 <td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.FitnessAccessoriesTabTest@7d4f9aae</td></tr>
+<td>11</td>
+<td>techTriangle_testNG.testing.SearchBoxTest@5b03b9fe</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.SearchBoxTest.SBT04Test()'><b>SBT04Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
+<td title='techTriangle_testNG.testing.BoxingMMATest.AR_03_VerifySortByDescription()'><b>AR_03_VerifySortByDescription</b><br>Test class: techTriangle_testNG.testing.BoxingMMATest</td>
+<td></td>
+<td>2</td>
+<td>techTriangle_testNG.testing.BoxingMMATest@37d4349f</td></tr>
+<tr>
+<td title='techTriangle_testNG.testing.SearchBoxTest.SBT03Test()'><b>SBT03Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
 <td></td>
 <td>7</td>
-<td>techTriangle_testNG.testing.SearchBoxTest@53aac487</td></tr>
+<td>techTriangle_testNG.testing.SearchBoxTest@5b03b9fe</td></tr>
+<tr>
+<td title='techTriangle_testNG.testing.BoxingMMATest.AR_04_VerifySortByPrice()'><b>AR_04_VerifySortByPrice</b><br>Test class: techTriangle_testNG.testing.BoxingMMATest</td>
+<td></td>
+<td>2</td>
+<td>techTriangle_testNG.testing.BoxingMMATest@37d4349f</td></tr>
 <tr>
 <td title='techTriangle_testNG.testing.SignUpTest.TC101_validEmailValidPasswordValidBillingInfo()'><b>TC101_validEmailValidPasswordValidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
 <td>14</td>
-<td>techTriangle_testNG.testing.SignUpTest@54e1c68b</td></tr>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.weightsProductTest.TTG_WPP_004_verifyShoppingProcess()'><b>TTG_WPP_004_verifyShoppingProcess</b><br>Test class: techTriangle_testNG.testing.weightsProductTest</td>
+<td title='techTriangle_testNG.testing.SignUpTest.TC401_invalidEmailInvalidPasswordValidBillingInfo()'><b>TC401_invalidEmailInvalidPasswordValidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
 <td>10</td>
-<td>techTriangle_testNG.testing.weightsProductTest@13fd2ccd</td></tr>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.FitnessAccessoriesTabTest.ValidateTabLink()'><b>ValidateTabLink</b><br>Test class: techTriangle_testNG.testing.FitnessAccessoriesTabTest</td>
+<td title='techTriangle_testNG.testing.SearchBoxTest.SBT04Test()'><b>SBT04Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
 <td></td>
-<td>53</td>
-<td>techTriangle_testNG.testing.FitnessAccessoriesTabTest@7d4f9aae</td></tr>
+<td>7</td>
+<td>techTriangle_testNG.testing.SearchBoxTest@5b03b9fe</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.LoginTest.TTG_LOGIN_001_to_006_verifyLoginFailed()'><b>TTG_LOGIN_001_to_006_verifyLoginFailed</b><br>Test class: techTriangle_testNG.testing.LoginTest<br>Parameters: , </td>
+<td title='techTriangle_testNG.testing.SignUpTest.TC202_validEmailInvalidPasswordInvalidBillingInfo()'><b>TC202_validEmailInvalidPasswordInvalidBillingInfo</b><br>Test class: techTriangle_testNG.testing.SignUpTest</td>
 <td></td>
-<td>1</td>
-<td>techTriangle_testNG.testing.LoginTest@55634720</td></tr>
+<td>9</td>
+<td>techTriangle_testNG.testing.SignUpTest@c88a337</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.StrengthEquipmentTabTest.ValidateTabLink()'><b>ValidateTabLink</b><br>Test class: techTriangle_testNG.testing.StrengthEquipmentTabTest</td>
+<td title='techTriangle_testNG.testing.SearchBoxTest.SBT01Test()'><b>SBT01Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
 <td></td>
-<td>44</td>
-<td>techTriangle_testNG.testing.StrengthEquipmentTabTest@272113c4</td></tr>
+<td>9</td>
+<td>techTriangle_testNG.testing.SearchBoxTest@5b03b9fe</td></tr>
 <tr>
-<td title='techTriangle_testNG.testing.HomePageImageClickableTest.homePage_imageClickable()'><b>homePage_imageClickable</b><br>Test class: techTriangle_testNG.testing.HomePageImageClickableTest</td>
+<td title='techTriangle_testNG.testing.SearchBoxTest.SBT02Test()'><b>SBT02Test</b><br>Test class: techTriangle_testNG.testing.SearchBoxTest</td>
 <td></td>
-<td>20</td>
-<td>techTriangle_testNG.testing.HomePageImageClickableTest@b9b00e0</td></tr>
+<td>7</td>
+<td>techTriangle_testNG.testing.SearchBoxTest@5b03b9fe</td></tr>
 </table><p>
 </body>
 </html>

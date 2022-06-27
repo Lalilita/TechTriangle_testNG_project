@@ -25,6 +25,8 @@ public class Constants {
 	public static final String shoppingCartUrl = "https://www.fitnessavenue.ca/shopping_cart";
 	public static final String checkoutUrl = "https://www.fitnessavenue.ca/checkout";
 	public static final String boxingPageUrl = "https://www.fitnessavenue.ca/zmma/boxing-mma";
+	public static final String fitnessFacebookUrl = "https://www.facebook.com/fitnessavenue.ca/";
+	public static final String fitnessInstagramUrl = "https://www.instagram.com/accounts/login/?next=/fitnessavenue/";
 
 	// list
 	public static final ArrayList<String> expect55lbsProductDetails = new ArrayList<>(
