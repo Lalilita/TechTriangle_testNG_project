@@ -3,25 +3,31 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="techTriangle_testNG.utilities.ListenersTestNG"></listener>
+		<listener class-name="utilities.ListenersTestNG"></listener>
 	</listeners>
 
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="techTriangle_testNG.testing.LoginTest" />
+			<class name="techTriangle_testNG.testing.StrengthAndConNumberPageTest" />
 			<class name="techTriangle_testNG.testing.weightsProductTest" />
+
+			<class name="techTriangle_testNG.testing.HomePageSlideTest" />
+			<class name="techTriangle_testNG.testing.ShippingEstimateTest" />
+			<class name="techTriangle_testNG.testing.StrengthEquipmentTabTest" />
+			<class name="techTriangle_testNG.testing.FitnessAccessoriesTabTest" />
+
 			<class name="techTriangle_testNG.testing.HomePageImageClickableTest" />
 			<class name="techTriangle_testNG.testing.HomePageAddItemTest" />
-			<class name="techTriangle_testNG.testing.FitnessAccessoriesTabTest" />
 			<class name="techTriangle_testNG.testing.footerTest" />
-			<class name="techTriangle_testNG.testing.SignUpTest" />
-			<class name="techTriangle_testNG.testing.SearchBoxTest" />
-			<class name="techTriangle_testNG.testing.ShippingEstimateTest" />
+
 			<class name="techTriangle_testNG.testing.CurrencyTest" />
 			<class name="techTriangle_testNG.testing.FilterThePriceTest" />
 			<class name="techTriangle_testNG.testing.EbikesPageTest" />
-			<class name="techTriangle_testNG.testing.StrengthEquipmentTabTest" />
-			<class name="techTriangle_testNG.testing.HomePageSlideTest" />
+
+			<class name="techTriangle_testNG.testing.SignUpTest" />
+			<class name="techTriangle_testNG.testing.SearchBoxTest" />
+
 
 		</classes>
 	</test> <!-- Test -->
