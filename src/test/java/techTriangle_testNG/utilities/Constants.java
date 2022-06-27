@@ -24,7 +24,7 @@ public class Constants {
 	public static final String virginRubberDumbbellsUrl = "https://www.fitnessavenue.ca/category/DUMBBELLS2/virgin-rubber-dumbbells";
 	public static final String shoppingCartUrl = "https://www.fitnessavenue.ca/shopping_cart";
 	public static final String checkoutUrl = "https://www.fitnessavenue.ca/checkout";
-	public static final String eBikesPageUrl = "https://www.fitnessavenue.ca/category/EBIKES/ebikes";
+	public static final String boxingPageUrl = "https://www.fitnessavenue.ca/zmma/boxing-mma";
 
 	// list
 	public static final ArrayList<String> expect55lbsProductDetails = new ArrayList<>(
@@ -60,15 +60,18 @@ public class Constants {
 
 	// Kangkook
 
-	public static final String[] expectArraySortByPartNumberAsc = { "EBCLASSIC2B", "EBCLASSIC2W", "EBCOSMO", "EBMETROB",
-			"EBMETROP1", "EBMETROP2", "EBMETROW" };
-	public static final String[] expectArraySortByShortDescriptionAsc = {
-			"Magnum Classic II – Low Step Folding Electric Bike - Black",
-			"Magnum Classic II – Low Step Folding Electric Bike - White", "Magnum Cosmopolitan Electric Bike - Black",
-			"Magnum Metro Low Step Electric Bike - Black", "Magnum Metro+ High Step Electric Bike",
-			"Magnum Metro+ Low Step Electric Bike", "Magnum Metro Low Step Electric Bike - White" };
-	public static final String[] expectArraySortByPartPriceAsc = { "$2,199.99 CAD EA", "$2,199.99 CAD EA", "$2,199.99 CAD EA", 
-	        "$2,849.99 CAD EA", "$2,849.99 CAD EA", "$2,849.99 CAD EA", "$2,849.99 CAD EA"};
-
+	public static final String[] expectArraySortByPartNumberAsc = {"ACC026", "MAA002", "MAA004", "MAA005", "MAA006", 
+		"MMA TB055B", "MMA011B", "MMA011BLA", "MMA011R", "MMA011W", "MMA016", "MMA017"};
+		
+	public static final String[] expectArraySortByShortDescriptionAsc = {"108\" Hand Wraps - Black", 
+			"108\" Hand Wraps - Blue", "108\" Hand Wraps - Red", "108\" Hand Wraps - White", 
+			"50-100lbs Adjustable Vinyl Heavy Bag", "AmStaff Fitness 12oz Boxing Gloves", 
+			"AmStaff Fitness 14oz Boxing Gloves","AmStaff Fitness 16oz Boxing Gloves",
+			"AmStaff Fitness Commercial Free-Standing XL Heavy Bag", "AmStaff Fitness DF7019 Foldable Speedbag Platform",
+			"AmStaff Fitness Free Standing Speed Bag","AmStaff Fitness Muay Thai Pads - Pair"};
+	
+	public static final String[] expectArraySortByPartPriceAsc = {"$4.99 CAD EA", "$4.99 CAD EA", 
+	         "$4.99 CAD EA", "$4.99 CAD EA", "$9.99 CAD EA", "$14.99 CAD EA", "$15.99 CAD EA", 
+	         "$19.99 CAD EA", "$29.99 CAD EA", "$29.99 CAD EA", "$29.99 CAD EA", "$29.99 CAD EA"};
 
 }

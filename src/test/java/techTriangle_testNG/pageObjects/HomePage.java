@@ -442,9 +442,8 @@ public class HomePage extends CommonMethods {
 
 	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[1]")
 	public WebElement myAccountBtn;
-	
-	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
-	public WebElement ebikesTap; 
 
+	@FindBy(xpath = "//a[text()='Boxing/MMA']")
+	public WebElement boxingTap;
 
 }
