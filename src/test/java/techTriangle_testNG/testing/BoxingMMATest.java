@@ -8,7 +8,6 @@ import techTriangle_testNG.utilities.CommonMethods;
 
 public class BoxingMMATest extends CommonMethods{
 
-
 	@BeforeClass
 	public void setup() {
 		getDriver();
@@ -33,6 +32,7 @@ public class BoxingMMATest extends CommonMethods{
 	public void AR_04_VerifySortByPrice() throws InterruptedException {
 		boxingPage.verifySortByPriceAsc();
 	}
+	
 	
 	@AfterClass
 	public void teardown() {
