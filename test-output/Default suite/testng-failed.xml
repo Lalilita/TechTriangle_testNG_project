@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="techTriangle_testNG.testing.EbikesPageTest">
+      <class name="techTriangle_testNG.testing.LoginTest">
         <methods>
-          <include name="setup"/>
+          <include name="TTG_LOGIN_007_verifyLoginSuccess" invocation-numbers="0"/>
           <include name="teardown"/>
-          <include name="EB_04_VerifySortByPrice"/>
+          <include name="TTG_LOGIN_001_to_006_verifyLoginFailed" invocation-numbers="1 2 3 4 5"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- techTriangle_testNG.testing.EbikesPageTest -->
+      </class> <!-- techTriangle_testNG.testing.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

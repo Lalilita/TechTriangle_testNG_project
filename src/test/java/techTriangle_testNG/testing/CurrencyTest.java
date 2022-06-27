@@ -1,18 +1,13 @@
 package techTriangle_testNG.testing;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
+import org.testng.annotations.BeforeMethod;
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 public class CurrencyTest extends CommonMethods{
 	
-	//WebDriver driver;
 	
 	@BeforeMethod
 	public void setup() {
@@ -24,8 +19,8 @@ public class CurrencyTest extends CommonMethods{
 		System.out.println("browser closed");
 	}
   
+
 	@Test
-	@Ignore
 	public void TTG_CHANGE_CURRENTCY_01_verifyCanadaCurrency() throws InterruptedException {
 		homePage.verifyCanadaCurrency();
 	    Thread.sleep(5000);

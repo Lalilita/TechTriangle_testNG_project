@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
 import techTriangle_testNG.utilities.CommonMethods;
 import techTriangle_testNG.utilities.Constants;
 
@@ -33,6 +32,9 @@ public class EbikesPage extends CommonMethods{
 	@FindBy (xpath = "/html/body/div[3]/div[2]/div/div[2]/a")
 	public WebElement closeTab;
 	
+
+
+	
 	public void verifyBikeImageCount() {
 		click(ebikesTap);
 		Assert.assertTrue(ebikesTap.isEnabled());
@@ -54,7 +56,6 @@ public class EbikesPage extends CommonMethods{
 		Assert.assertTrue(expectedBikeName.contains("Bike"));
 		click(closeTab);
 	}
-
 }	
 	
 	

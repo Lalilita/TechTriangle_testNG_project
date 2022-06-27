@@ -3,11 +3,11 @@ package techTriangle_testNG.testing;
 
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
-public class SearchBoxTestingTest extends CommonMethods{
+public class SearchBoxTest extends CommonMethods{
 
 	
 	

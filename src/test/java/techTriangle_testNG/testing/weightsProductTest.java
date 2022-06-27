@@ -2,19 +2,15 @@ package techTriangle_testNG.testing;
 
 
 
-import java.util.ArrayList;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import java.util.ArrayList;
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
 public class weightsProductTest extends CommonMethods{
-
-	WebDriver driver;
 
 	@BeforeClass
 	public void setup() {
@@ -27,17 +23,17 @@ public class weightsProductTest extends CommonMethods{
 	}
   
 	@Test
-	public void TTG_WPP_001_verifyWeightsTab() {
+	public void TTG_WPP_001_verifyWeightsTab() throws InterruptedException {
 		weightsPage.verifyWeightsTab();
 	}
 	
 	@Test(dependsOnMethods = "TTG_WPP_001_verifyWeightsTab")
-	public void TTG_WPP_002_verifyAddOutOfStockProduct() {
+	public void TTG_WPP_002_verifyAddOutOfStockProduct() throws InterruptedException {
 		dumbbell60VgRbPage.verifyNotAbleToAddOutOfStockProductToCart();
 	}
 
 	@Test(dependsOnMethods = "TTG_WPP_002_verifyAddOutOfStockProduct")
-	public void TTG_WPP_003_verifyAddAvalibleProduct() {
+	public void TTG_WPP_003_verifyAddAvalibleProduct() throws InterruptedException {
 		BaseClass.driver.navigate().back();
 		dumbbellVgRbPage.goToVirginRubber55lbsPage();
 		dumbbell55VgRbPage.verifyProductDetailsAreDisplayed();
@@ -58,7 +54,7 @@ public class weightsProductTest extends CommonMethods{
 	}
 	
 	@Test(dependsOnMethods = "TTG_WPP_004_verifyShoppingProcess")
-	public void TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn() {
+	public void TTG_WPP_005_verifyAbleToClearAllItemWithClearBtn() throws InterruptedException {
 		checkPage.previewCart();
 		cartPage.verifyClearBtn();
 	}
