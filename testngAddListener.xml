@@ -27,7 +27,7 @@
 
 			<class name="techTriangle_testNG.testing.SignUpTest" />
 			<class name="techTriangle_testNG.testing.SearchBoxTest" />
-
+			<class name="techTriangle_testNG.testing.BoxingMMATest" />
 
 		</classes>
 	</test> <!-- Test -->
