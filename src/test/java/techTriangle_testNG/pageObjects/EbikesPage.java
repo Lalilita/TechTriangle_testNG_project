@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 import techTriangle_testNG.utilities.Constants;
 
@@ -12,9 +11,9 @@ public class EbikesPage extends CommonMethods{
 
 	
 	public EbikesPage() {
-		PageFactory.initElements(BaseClass.getDriver(), this);
+		PageFactory.initElements(getDriver(), this);
 	}
-
+	
 	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
 	public WebElement ebikesTap;
 	
@@ -32,6 +31,9 @@ public class EbikesPage extends CommonMethods{
 	
 	@FindBy (xpath = "/html/body/div[3]/div[2]/div/div[2]/a")
 	public WebElement closeTab;
+	
+
+
 	
 	public void verifyBikeImageCount() {
 		click(ebikesTap);
@@ -55,4 +57,10 @@ public class EbikesPage extends CommonMethods{
 		click(closeTab);
 	}
 }	
+	
+	
+		
+		
+
+
 	
