@@ -170,9 +170,9 @@ public class HomePage extends CommonMethods {
 	
 	@FindBy(xpath = "//input[@class='search-bar-button']")
 	public WebElement searchButton;
-	
-	@FindBy (xpath = "//a[@ng-href='https://www.fitnessavenue.ca/category/EBIKES/ebikes']")
-	public WebElement ebikesTap; 
+
+	@FindBy(xpath = "//a[text()='Boxing/MMA']")
+	public WebElement boxingTap;
 
 	// -------------- Methods -------------- //
 
@@ -454,13 +454,6 @@ public class HomePage extends CommonMethods {
 	}
 
 
-<<<<<<< HEAD
-	@FindBy(xpath = "//*[@id=\"header\"]/div[4]/a[1]")
-	public WebElement myAccountBtn;
-=======
->>>>>>> main
 
-	@FindBy(xpath = "//a[text()='Boxing/MMA']")
-	public WebElement boxingTap;
 
 }
