@@ -1,6 +1,7 @@
 package techTriangle_testNG.testing;
 
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -45,13 +46,16 @@ public class LoginTest extends CommonMethods{
 	@Test(dataProvider = "invalidUsernamesAndPasswords")
 	public void TTG_LOGIN_001_to_006_verifyLoginFailed(String username, String password) throws InterruptedException {
 		loginPage.loginToHomepage(username, password);	
-		loginPage.verifyLoginFailed();
+		Assert.assertTrue(loginPage.errorText.isDisplayed());
+		System.out.println(loginPage.getErrorText());
 	}
 	
 	@Test(dataProvider = "validUsernameAndPassword")
 	public void TTG_LOGIN_007_verifyLoginSuccess(String username, String password) throws InterruptedException {
 		loginPage.loginToHomepage(username, password);	
-		loginPage.verifyLoginSuccess();
+		waitForVisibility(loginPage.logoutBtn);
+		Assert.assertTrue(loginPage.logoutBtn.isDisplayed());
+		Assert.assertTrue(loginPage.logoutBtn.isEnabled());
 	}
 
 }

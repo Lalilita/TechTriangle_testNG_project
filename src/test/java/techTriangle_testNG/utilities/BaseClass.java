@@ -1,8 +1,8 @@
 package techTriangle_testNG.utilities;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -31,19 +31,19 @@ public class BaseClass {
 				WebDriverManager.safaridriver().setup();
 				driver = new SafariDriver();
 				break;
-
+				
 			}
 			driver.manage().window().maximize();
 			driver.get(BaseClass.getProperty("url"));
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.explicit_wait_time));
 			PageInitializer.initialize();
 		}
 		return driver;
 	}
 
-	public static void tearDown() {
+	public void tearDown() {
 		if (driver != null) {
-			driver.quit();
+			driver.close();
 			driver = null;
 		}
 	}

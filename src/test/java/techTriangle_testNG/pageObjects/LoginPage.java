@@ -3,7 +3,6 @@ package techTriangle_testNG.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
@@ -44,17 +43,7 @@ public class LoginPage extends CommonMethods{
 		return text;
 	}
 	
-	public void verifyLoginFailed() {
-		Assert.assertTrue(errorText.isDisplayed());
-		System.out.println(getErrorText());
-	}
 	
-	public void verifyLoginSuccess() throws InterruptedException {
-		Thread.sleep(2000);
-		Assert.assertTrue(logoutBtn.isDisplayed());
-		Assert.assertTrue(logoutBtn.isEnabled());
-		System.out.println("Successfully Login! Logout button is display and enable");
-	}
 	
 
 }	

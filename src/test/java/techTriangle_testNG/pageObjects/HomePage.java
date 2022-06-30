@@ -199,6 +199,17 @@ public class HomePage extends CommonMethods {
 	public void goToWeightsPage() {
 		weightsTab.click();
 	}
+	
+	public void verifyWeightsTab() {
+		weightsTab.isDisplayed();
+		Assert.assertTrue(weightsTab.isDisplayed());
+		System.out.println("Weights product tab is displayed in the home page");
+		Assert.assertTrue(isClickable(weightsTab, driver));
+		System.out.println("Weights product tab is enable to be clicked");
+		goToWeightsPage();
+		Assert.assertEquals(Constants.weightsUrl, driver.getCurrentUrl());
+		System.out.println("Weights product tab is navigated to Weights product pages");	
+	}
 
 	
 	// Method ------- Ratthanon

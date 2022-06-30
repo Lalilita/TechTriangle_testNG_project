@@ -113,12 +113,12 @@ public class CheckoutPage extends CommonMethods {
 		System.out.println(cartList);
 		System.out.println(reviewOrderList);
 		Assert.assertEquals(cartList, reviewOrderList);
-		System.out.println("Cart order and Checkout order are matched");
+//		System.out.println("Cart order and Checkout order are matched");
 	}
 
-	public void verifyPlaceOrederBtnIsEnable() {
+	public void verifyPlaceOrederBtnIsClickable() {
 		Assert.assertTrue(isClickable(placeOrderBtn, driver));
-		System.out.println("Place order button is clickable");
+//		System.out.println("Place order button is clickable");
 	}
 
 }

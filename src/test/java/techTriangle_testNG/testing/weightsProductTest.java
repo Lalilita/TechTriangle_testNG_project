@@ -6,7 +6,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.util.ArrayList;
-import techTriangle_testNG.utilities.BaseClass;
 import techTriangle_testNG.utilities.CommonMethods;
 
 
@@ -24,7 +23,7 @@ public class WeightsProductTest extends CommonMethods{
   
 	@Test
 	public void TTG_WPP_001_verifyWeightsTab() throws InterruptedException {
-		weightsPage.verifyWeightsTab();
+		homePage.verifyWeightsTab();
 	}
 	
 	@Test(dependsOnMethods = "TTG_WPP_001_verifyWeightsTab")
@@ -34,7 +33,7 @@ public class WeightsProductTest extends CommonMethods{
 
 	@Test(dependsOnMethods = "TTG_WPP_002_verifyAddOutOfStockProduct")
 	public void TTG_WPP_003_verifyAddAvalibleProduct() throws InterruptedException {
-		BaseClass.driver.navigate().back();
+		driver.navigate().back();
 		dumbbellVgRbPage.goToVirginRubber55lbsPage();
 		dumbbell55VgRbPage.verifyProductDetailsAreDisplayed();
 		dumbbell55VgRbPage.verifyAddToCartBtnDisplayAndClickable();
@@ -50,7 +49,7 @@ public class WeightsProductTest extends CommonMethods{
 		cartPage.goToCheckOutProcess();
 		checkPage.enterBillingInfo();
 		checkPage.verifyReviewOrderEqualsToCartOrder(cartList, checkPage.getListOfReviewOrder());
-		checkPage.verifyPlaceOrederBtnIsEnable();
+		checkPage.verifyPlaceOrederBtnIsClickable();
 	}
 	
 	@Test(dependsOnMethods = "TTG_WPP_004_verifyShoppingProcess")

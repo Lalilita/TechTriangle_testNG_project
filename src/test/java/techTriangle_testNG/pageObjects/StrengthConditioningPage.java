@@ -38,35 +38,35 @@ public class StrengthConditioningPage extends CommonMethods {
 	
 	public void findSizeOfStrengthAndConProductTypes() {
 		int groupSize = strengthAndConProductsType.size();
-		Assert.assertEquals(Integer.parseInt(getProperty("expectedTotalProductGroup")), groupSize);
-		System.out.println("There are " + groupSize + " groups of products are displayed");
+		Assert.assertEquals(Integer.parseInt(getProperty("expectedTotalProductType")), groupSize);
+//		System.out.println("There are " + groupSize + " groups of products are displayed");
 	}
 
 	public void verifyStrengthAndConProductTypesAreClickable() {
 		for (int i = 0; i < strengthAndConProductsType.size(); i++) {
 			Assert.assertTrue(isClickable(strengthAndConProductsType.get(i), driver));
 		}
-		System.out.println("Each product group tab is clickable");
+//		System.out.println("Each product group tab is clickable");
 	}
 
-	public void goTobodyWeightGroup() {
+	public void goTobodyWeightType() {  //first typeTap
 		bodyWeightTypeTab.click();
 	}
 
-	public void verifyNumberOfProductMacthWithDisplayFilter() throws InterruptedException {
+	public void verifyNumberOfProductMatchWithDisplayFilter() throws InterruptedException {
 
 		for (int i = 0; i < displayValue.size(); i++) {
 			selectDropDownIndex(displayDropDown, i); // 1=12, 2=24, 3=48, 4=96
 			Thread.sleep(1000); //allow complete loading all items in a page
 			int filterNumber = Integer.parseInt(displayValue.get(i).getText()); // number that displayed in filter
 			int productDisplayNumber = bodyWeightProducts.size(); // number of product that displayed on each page
-			int expectedNumberPages = pageNumberDisplayed.size(); // expected number of page in the bottom box
-																		//+1 for another page of remaining items
-			int actualNumberPages = (Integer.parseInt(getProperty("totalProductBodyWeigth")) / filterNumber) + 1; 
 			Assert.assertTrue(productDisplayNumber <= filterNumber);
-			Assert.assertEquals(expectedNumberPages, actualNumberPages);
-			System.out.println("displayNumber = " + filterNumber + " productDisplayNumber = " + productDisplayNumber
-					+ " expectedNumberPages = " + expectedNumberPages + " actualNumberPages = " + actualNumberPages);
+			
+			int expectedNumberPages = (Integer.parseInt(getProperty("totalProductBodyWeigth")) / filterNumber) + 1; 
+			int actualNumberPages = pageNumberDisplayed.size(); // expected number of page in the bottom box
+			Assert.assertEquals(actualNumberPages, expectedNumberPages);
+//			System.out.println("displayNumber = " + filterNumber + " productDisplayNumber = " + productDisplayNumber
+//					+ " expectedNumberPages = " + expectedNumberPages + " actualNumberPages = " + actualNumberPages);
 		} //displayNumber = 12 productDisplayNumber = 12 expectedNumberPages = 4 actualNumberPages = 4
 	}
 }
