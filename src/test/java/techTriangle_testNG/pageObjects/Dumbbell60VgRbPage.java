@@ -23,8 +23,7 @@ public class Dumbbell60VgRbPage extends CommonMethods{
 	
 
 	public void verifyNotAbleToAddOutOfStockProductToCart() {
-		scrollToElement(weightsPage.dumbbellsWidget);
-		weightsPage.dumbbellsWidget.click();
+		weightsPage.goToDumbbellsPage();
 		dumbbellsPage.goToVirginRubberDumbbellsPage();
 		dumbbellVgRbPage.goToVirginRubber60lbsPage();
 		Assert.assertFalse(dumbbell60VgRbPage.addToCartBtn.isDisplayed());

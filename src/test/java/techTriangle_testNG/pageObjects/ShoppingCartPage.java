@@ -109,23 +109,15 @@ public class ShoppingCartPage extends CommonMethods {
 		double expectTotal = qty * itemprice;
 		Assert.assertEquals(expectTotal, actualTotalprice);
 		Assert.assertEquals(actualTotalprice, actualTsubtotalprice);
-		System.out.println(itemprice + " x " + qty + " = " + actualTotalprice);
-		System.out.println("Total and Subtotal update and display as multiply by updated Qty");
-	}
-
-	public void verifyClearBtn() {
-		clearBtn.click();
-		aceptAlert();
-		Assert.assertTrue(noItemHeader.isDisplayed());
-		Assert.assertTrue(continueShoppingLink.isDisplayed());
-		System.out.println("All Product in cart is cleared");
+//		System.out.println(itemprice + " x " + qty + " = " + actualTotalprice);
+//		System.out.println("Total and Subtotal update and display as multiply by updated Qty");
 	}
 
 	public void goToCheckOutProcess() {
 		checkoutBtn.click();
 		Assert.assertEquals(Constants.checkoutUrl, driver.getCurrentUrl());
 		Assert.assertTrue(checkPage.checkoutForm.isDisplayed());
-		System.out.println("Checkout button navigate to Checkout Page");
+//		System.out.println("Checkout button navigate to Checkout Page");
 	}
 
 	public ArrayList<String> getListOfAddedProduct() {
@@ -137,6 +129,14 @@ public class ShoppingCartPage extends CommonMethods {
 		addedProductList.add(total.getText());
 		addedProductList.add(subtotal.getText());
 		return addedProductList;
+	}
+	
+	public void verifyClearBtn() {
+		clearBtn.click();
+		aceptAlert();
+		Assert.assertTrue(noItemHeader.isDisplayed());
+		Assert.assertTrue(continueShoppingLink.isDisplayed());
+		System.out.println("All Product in cart is cleared");
 	}
 	
 	// Ratthanon

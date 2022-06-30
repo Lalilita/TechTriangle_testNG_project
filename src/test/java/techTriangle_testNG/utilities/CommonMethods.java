@@ -2,11 +2,13 @@ package techTriangle_testNG.utilities;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+//import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -188,7 +190,7 @@ public class CommonMethods extends PageInitializer{
 	}
 
 	public static WebDriverWait getWaitObject() {
-		WebDriverWait wait = new WebDriverWait(BaseClass.getDriver(), Constants.explicit_wait_time);
+		WebDriverWait wait = new WebDriverWait(BaseClass.getDriver(), Duration.ofSeconds(Constants.explicit_wait_time));
 		return wait;
 	}
 
@@ -325,8 +327,8 @@ public class CommonMethods extends PageInitializer{
 	
 	public static boolean isClickable(WebElement el, WebDriver driver) 
     {
-        try{
-            WebDriverWait wait = new WebDriverWait(driver, 6);
+        try{					
+            WebDriverWait wait = new WebDriverWait(BaseClass.getDriver(), Duration.ofSeconds(Constants.explicit_wait_time));
             wait.until(ExpectedConditions.elementToBeClickable(el));
             return true;
         }

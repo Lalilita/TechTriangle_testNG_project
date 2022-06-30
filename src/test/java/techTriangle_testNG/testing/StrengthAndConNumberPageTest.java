@@ -34,8 +34,8 @@ public class StrengthAndConNumberPageTest extends CommonMethods{
 	
 	@Test(dependsOnMethods = "TTG_STR_002_verifyProductGroupInStrengthAndConditioning")
 	public void TTG_STR_003_verifyNumberPageProductDisplayed() throws InterruptedException {
-		strengthConPage.goTobodyWeightGroup(); 
-		strengthConPage.verifyNumberOfProductMacthWithDisplayFilter();
+		strengthConPage.goTobodyWeightType(); 
+		strengthConPage.verifyNumberOfProductMatchWithDisplayFilter();
 	}
 }
 
